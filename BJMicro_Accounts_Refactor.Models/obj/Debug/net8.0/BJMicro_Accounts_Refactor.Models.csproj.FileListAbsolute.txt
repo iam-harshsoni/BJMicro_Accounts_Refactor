@@ -1,0 +1,11 @@
+D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.Models\bin\Debug\net8.0\BJMicro_Accounts_Refactor.Models.deps.json
+D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.Models\bin\Debug\net8.0\BJMicro_Accounts_Refactor.Models.dll
+D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.Models\bin\Debug\net8.0\BJMicro_Accounts_Refactor.Models.pdb
+D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.Models\obj\Debug\net8.0\BJMicro_Accounts_Refactor.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.Models\obj\Debug\net8.0\BJMicro_Accounts_Refactor.Models.AssemblyInfoInputs.cache
+D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.Models\obj\Debug\net8.0\BJMicro_Accounts_Refactor.Models.AssemblyInfo.cs
+D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.Models\obj\Debug\net8.0\BJMicro_Accounts_Refactor.Models.csproj.CoreCompileInputs.cache
+D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.Models\obj\Debug\net8.0\BJMicro_Accounts_Refactor.Models.dll
+D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.Models\obj\Debug\net8.0\refint\BJMicro_Accounts_Refactor.Models.dll
+D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.Models\obj\Debug\net8.0\BJMicro_Accounts_Refactor.Models.pdb
+D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.Models\obj\Debug\net8.0\ref\BJMicro_Accounts_Refactor.Models.dll
