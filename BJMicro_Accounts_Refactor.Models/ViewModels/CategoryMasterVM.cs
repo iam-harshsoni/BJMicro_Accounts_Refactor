@@ -5,14 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BJMicro_Accounts_Refactor.Models.ViewModels;
+public class CategoryMasterVM
 {
-    public class CategoryMasterVM
-    {
-        public int rowNo { get; set; }
-        public long cId { get; set; }
-        public string cName { get; set; }
-        public string prefix { get; set; }
-        public string createdDate { get; set; }
-        public string updatedDate { get; set; }
-    }
+    public int rowNo { get; set; }
+    public long cId { get; set; }
+    public string cName { get; set; }
+    public string prefix { get; set; }
+    public string createdDate { get; set; }
+    public string updatedDate { get; set; }
 }

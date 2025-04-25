@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BJMicro_Accounts_Refactor.DataAccess")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+92e8a5a5a85b065f70389db1caab07a8887bc7c0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d6c3fc9b199c891e60e531a37824a4f14fcdceec")]
 [assembly: System.Reflection.AssemblyProductAttribute("BJMicro_Accounts_Refactor.DataAccess")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BJMicro_Accounts_Refactor.DataAccess")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

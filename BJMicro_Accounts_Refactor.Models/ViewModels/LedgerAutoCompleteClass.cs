@@ -5,9 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BJMicro_Accounts_Refactor.Models.ViewModels;
+
+public class LedgerAutoCompleteClass
 {
-    public class LedgerAutoCompleteClass
-    {
-        public string MyProperty { get; set; }
-    }
+    public string MyProperty { get; set; }
 }
