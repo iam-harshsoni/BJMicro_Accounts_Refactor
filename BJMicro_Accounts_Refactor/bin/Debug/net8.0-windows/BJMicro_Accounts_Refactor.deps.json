@@ -845,7 +845,7 @@
       },
       "BJMicro_Accounts_Refactor.DataAccess/1.0.0": {
         "dependencies": {
-          "BJMicro_Accounts_Refactor.Models": "1.0.0",
+          "BJMicro_Accounts_Refactor.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "8.0.14",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.14"
         },
@@ -856,9 +856,9 @@
           }
         }
       },
-      "BJMicro_Accounts_Refactor.Models/1.0.0": {
+      "BJMicro_Accounts_Refactor.Domain/1.0.0": {
         "runtime": {
-          "BJMicro_Accounts_Refactor.Models.dll": {
+          "BJMicro_Accounts_Refactor.Domain.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1409,7 +1409,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "BJMicro_Accounts_Refactor.Models/1.0.0": {
+    "BJMicro_Accounts_Refactor.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

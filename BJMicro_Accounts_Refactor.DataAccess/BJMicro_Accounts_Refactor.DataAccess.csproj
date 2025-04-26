@@ -18,6 +18,6 @@
 		</PackageReference>
 	</ItemGroup>
 	<ItemGroup>
-	  <ProjectReference Include="..\BJMicro_Accounts_Refactor.Models\BJMicro_Accounts_Refactor.Models.csproj" />
+	  <ProjectReference Include="..\BJMicro_Accounts_Refactor.Models\BJMicro_Accounts_Refactor.Domain.csproj" />
 	</ItemGroup>
 </Project>

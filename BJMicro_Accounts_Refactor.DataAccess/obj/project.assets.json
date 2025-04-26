@@ -1495,14 +1495,14 @@
           }
         }
       },
-      "BJMicro_Accounts_Refactor.Models/1.0.0": {
+      "BJMicro_Accounts_Refactor.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "compile": {
-          "bin/placeholder/BJMicro_Accounts_Refactor.Models.dll": {}
+          "bin/placeholder/BJMicro_Accounts_Refactor.Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BJMicro_Accounts_Refactor.Models.dll": {}
+          "bin/placeholder/BJMicro_Accounts_Refactor.Domain.dll": {}
         }
       }
     }
@@ -4007,15 +4007,15 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "BJMicro_Accounts_Refactor.Models/1.0.0": {
+    "BJMicro_Accounts_Refactor.Domain/1.0.0": {
       "type": "project",
-      "path": "../BJMicro_Accounts_Refactor.Models/BJMicro_Accounts_Refactor.Models.csproj",
-      "msbuildProject": "../BJMicro_Accounts_Refactor.Models/BJMicro_Accounts_Refactor.Models.csproj"
+      "path": "../BJMicro_Accounts_Refactor.Models/BJMicro_Accounts_Refactor.Domain.csproj",
+      "msbuildProject": "../BJMicro_Accounts_Refactor.Models/BJMicro_Accounts_Refactor.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "BJMicro_Accounts_Refactor.Models >= 1.0.0",
+      "BJMicro_Accounts_Refactor.Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 8.0.14",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.14",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.14",
@@ -4054,8 +4054,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Project\\2018-24\\Desktop App\\From_Meet_Nathani\\BJMicroAcc_Refactor\\BJMicro_Accounts_Refactor\\BJMicro_Accounts_Refactor.Models\\BJMicro_Accounts_Refactor.Models.csproj": {
-              "projectPath": "D:\\Project\\2018-24\\Desktop App\\From_Meet_Nathani\\BJMicroAcc_Refactor\\BJMicro_Accounts_Refactor\\BJMicro_Accounts_Refactor.Models\\BJMicro_Accounts_Refactor.Models.csproj"
+            "D:\\Project\\2018-24\\Desktop App\\From_Meet_Nathani\\BJMicroAcc_Refactor\\BJMicro_Accounts_Refactor\\BJMicro_Accounts_Refactor.Models\\BJMicro_Accounts_Refactor.Domain.csproj": {
+              "projectPath": "D:\\Project\\2018-24\\Desktop App\\From_Meet_Nathani\\BJMicroAcc_Refactor\\BJMicro_Accounts_Refactor\\BJMicro_Accounts_Refactor.Models\\BJMicro_Accounts_Refactor.Domain.csproj"
             }
           }
         }

@@ -1499,7 +1499,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "BJMicro_Accounts_Refactor.Models": "1.0.0",
+          "BJMicro_Accounts_Refactor.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "8.0.14",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.14"
         },
@@ -1510,14 +1510,14 @@
           "bin/placeholder/BJMicro_Accounts_Refactor.DataAccess.dll": {}
         }
       },
-      "BJMicro_Accounts_Refactor.Models/1.0.0": {
+      "BJMicro_Accounts_Refactor.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "compile": {
-          "bin/placeholder/BJMicro_Accounts_Refactor.Models.dll": {}
+          "bin/placeholder/BJMicro_Accounts_Refactor.Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BJMicro_Accounts_Refactor.Models.dll": {}
+          "bin/placeholder/BJMicro_Accounts_Refactor.Domain.dll": {}
         }
       }
     }
@@ -4027,10 +4027,10 @@
       "path": "../BJMicro_Accounts_Refactor.DataAccess/BJMicro_Accounts_Refactor.DataAccess.csproj",
       "msbuildProject": "../BJMicro_Accounts_Refactor.DataAccess/BJMicro_Accounts_Refactor.DataAccess.csproj"
     },
-    "BJMicro_Accounts_Refactor.Models/1.0.0": {
+    "BJMicro_Accounts_Refactor.Domain/1.0.0": {
       "type": "project",
-      "path": "../BJMicro_Accounts_Refactor.Models/BJMicro_Accounts_Refactor.Models.csproj",
-      "msbuildProject": "../BJMicro_Accounts_Refactor.Models/BJMicro_Accounts_Refactor.Models.csproj"
+      "path": "../BJMicro_Accounts_Refactor.Models/BJMicro_Accounts_Refactor.Domain.csproj",
+      "msbuildProject": "../BJMicro_Accounts_Refactor.Models/BJMicro_Accounts_Refactor.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {

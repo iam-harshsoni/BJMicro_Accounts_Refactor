@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using BJMicro_Accounts_Refactor.Models.DomainModels;
+using BJMicro_Accounts_Refactor.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace BJMicro_Accounts_Refactor.DataAccess.Data;

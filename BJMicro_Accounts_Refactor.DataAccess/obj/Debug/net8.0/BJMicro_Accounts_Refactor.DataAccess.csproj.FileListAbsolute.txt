@@ -10,9 +10,9 @@ D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Acc
 D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.DataAccess\obj\Debug\net8.0\BJMicro_Accounts_Refactor.DataAccess.pdb
 D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.DataAccess\obj\Debug\net8.0\ref\BJMicro_Accounts_Refactor.DataAccess.dll
 D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.DataAccess\bin\Debug\net8.0\BJMicro_Accounts_Refactor.DataAccess.runtimeconfig.json
-D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.DataAccess\bin\Debug\net8.0\BJMicro_Accounts_Refactor.Models.dll
-D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.DataAccess\bin\Debug\net8.0\BJMicro_Accounts_Refactor.Models.pdb
 D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.DataAccess\obj\Debug\net8.0\BJMicro_Accounts_Refactor.DataAccess.csproj.AssemblyReference.cache
 D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.DataAccess\obj\Debug\net8.0\BJMicro_Accounts_Refactor.DataAccess.sourcelink.json
 D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.DataAccess\obj\Debug\net8.0\BJMicro_.82E2426A.Up2Date
 D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.DataAccess\obj\Debug\net8.0\BJMicro_Accounts_Refactor.DataAccess.genruntimeconfig.cache
+D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.DataAccess\bin\Debug\net8.0\BJMicro_Accounts_Refactor.Domain.dll
+D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.DataAccess\bin\Debug\net8.0\BJMicro_Accounts_Refactor.Domain.pdb

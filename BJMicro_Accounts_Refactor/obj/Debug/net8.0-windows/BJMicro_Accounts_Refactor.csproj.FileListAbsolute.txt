@@ -117,9 +117,7 @@ D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Acc
 D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor\bin\Debug\net8.0-windows\BJMicro_Accounts_Refactor.DataAccess.dll
-D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor\bin\Debug\net8.0-windows\BJMicro_Accounts_Refactor.Models.dll
 D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor\bin\Debug\net8.0-windows\BJMicro_Accounts_Refactor.DataAccess.pdb
-D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor\bin\Debug\net8.0-windows\BJMicro_Accounts_Refactor.Models.pdb
 D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor\obj\Debug\net8.0-windows\BJMicro_Accounts_Refactor.csproj.AssemblyReference.cache
 D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor\obj\Debug\net8.0-windows\BJMicro_Accounts_Refactor.sourcelink.json
 D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor\obj\Debug\net8.0-windows\BJMicro_.AE01200C.Up2Date
@@ -139,3 +137,5 @@ D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Acc
 D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor\obj\Debug\net8.0-windows\BJMicro_Accounts_Refactor.UserControls.StockInventoryDetails.resources
 D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor\obj\Debug\net8.0-windows\BJMicro_Accounts_Refactor.UserControls.SupplierDetails.resources
 D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor\obj\Debug\net8.0-windows\BJMicro_Accounts_Refactor.UserControls.TrailBalance.resources
+D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor\bin\Debug\net8.0-windows\BJMicro_Accounts_Refactor.Domain.dll
+D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor\bin\Debug\net8.0-windows\BJMicro_Accounts_Refactor.Domain.pdb

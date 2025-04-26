@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Project\\2018-24\\Desktop App\\From_Meet_Nathani\\BJMicroAcc_Refactor\\BJMicro_Accounts_Refactor\\BJMicro_Accounts_Refactor.Models\\BJMicro_Accounts_Refactor.Models.csproj",
-      "projectName": "BJMicro_Accounts_Refactor.Models",
-      "projectPath": "D:\\Project\\2018-24\\Desktop App\\From_Meet_Nathani\\BJMicroAcc_Refactor\\BJMicro_Accounts_Refactor\\BJMicro_Accounts_Refactor.Models\\BJMicro_Accounts_Refactor.Models.csproj",
+      "projectUniqueName": "D:\\Project\\2018-24\\Desktop App\\From_Meet_Nathani\\BJMicroAcc_Refactor\\BJMicro_Accounts_Refactor\\BJMicro_Accounts_Refactor.Models\\BJMicro_Accounts_Refactor.Domain.csproj",
+      "projectName": "BJMicro_Accounts_Refactor.Domain",
+      "projectPath": "D:\\Project\\2018-24\\Desktop App\\From_Meet_Nathani\\BJMicroAcc_Refactor\\BJMicro_Accounts_Refactor\\BJMicro_Accounts_Refactor.Models\\BJMicro_Accounts_Refactor.Domain.csproj",
       "packagesPath": "C:\\Users\\Sonih\\.nuget\\packages\\",
       "outputPath": "D:\\Project\\2018-24\\Desktop App\\From_Meet_Nathani\\BJMicroAcc_Refactor\\BJMicro_Accounts_Refactor\\BJMicro_Accounts_Refactor.Models\\obj\\",
       "projectStyle": "PackageReference",
