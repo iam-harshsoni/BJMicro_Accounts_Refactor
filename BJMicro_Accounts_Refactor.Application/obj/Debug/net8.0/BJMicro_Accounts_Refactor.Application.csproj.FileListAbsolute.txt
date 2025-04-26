@@ -10,3 +10,9 @@ D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Acc
 D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.Application\obj\Debug\net8.0\refint\BJMicro_Accounts_Refactor.Application.dll
 D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.Application\obj\Debug\net8.0\BJMicro_Accounts_Refactor.Application.pdb
 D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.Application\obj\Debug\net8.0\ref\BJMicro_Accounts_Refactor.Application.dll
+D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.Application\obj\Debug\net8.0\BJMicro_Accounts_Refactor.Application.csproj.AssemblyReference.cache
+D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.Application\bin\Debug\net8.0\BJMicro_Accounts_Refactor.DataAccess.dll
+D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.Application\bin\Debug\net8.0\BJMicro_Accounts_Refactor.Domain.dll
+D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.Application\bin\Debug\net8.0\BJMicro_Accounts_Refactor.DataAccess.pdb
+D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.Application\bin\Debug\net8.0\BJMicro_Accounts_Refactor.Domain.pdb
+D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.Application\obj\Debug\net8.0\BJMicro_.43A7B045.Up2Date

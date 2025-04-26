@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BJMicro_Accounts_Refactor.DataAccess.Repository.IRepository
+namespace BJMicro_Accounts_Refactor.Utils.App_Code
 {
-    public interface IUnitOfWork
+    internal class TextBoxValidation
     {
-        void Save();
     }
 }

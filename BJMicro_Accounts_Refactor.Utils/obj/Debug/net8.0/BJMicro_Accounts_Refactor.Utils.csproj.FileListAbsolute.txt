@@ -5,6 +5,7 @@ D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Acc
 D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.Utils\obj\Debug\net8.0\BJMicro_Accounts_Refactor.Utils.AssemblyInfoInputs.cache
 D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.Utils\obj\Debug\net8.0\BJMicro_Accounts_Refactor.Utils.AssemblyInfo.cs
 D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.Utils\obj\Debug\net8.0\BJMicro_Accounts_Refactor.Utils.csproj.CoreCompileInputs.cache
+D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.Utils\obj\Debug\net8.0\BJMicro_Accounts_Refactor.Utils.sourcelink.json
 D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.Utils\obj\Debug\net8.0\BJMicro_Accounts_Refactor.Utils.dll
 D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.Utils\obj\Debug\net8.0\refint\BJMicro_Accounts_Refactor.Utils.dll
 D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor.Utils\obj\Debug\net8.0\BJMicro_Accounts_Refactor.Utils.pdb

@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BJMicro_Accounts_Refactor.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BJMicro_Accounts_Refactor.Utils", "BJMicro_Accounts_Refactor.Utils\BJMicro_Accounts_Refactor.Utils.csproj", "{02C2D0B5-0889-4537-BF4C-2C255C95BC2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BJMicro_Accounts_Refactor.Application", "BJMicro_Accounts_Refactor.Application\BJMicro_Accounts_Refactor.Application.csproj", "{39497703-4C2B-4003-99B3-5B4F7B09406D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BJMicro_Accounts_Refactor.Core", "BJMicro_Accounts_Refactor.Application\BJMicro_Accounts_Refactor.Core.csproj", "{39497703-4C2B-4003-99B3-5B4F7B09406D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

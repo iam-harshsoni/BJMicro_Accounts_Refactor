@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BJMicro_Accounts_Refactor.DataAccess\BJMicro_Accounts_Refactor.DataAccess.csproj" />
+  </ItemGroup>
+
 </Project>
