@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label3 = new Label();
-            label2 = new Label();
             button15 = new Button();
             panel2 = new Panel();
             panel1 = new Panel();
@@ -52,8 +50,6 @@
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
-            panel3 = new Panel();
-            pictureBox1 = new PictureBox();
             panel4 = new Panel();
             label1 = new Label();
             MainWindow = new Panel();
@@ -63,36 +59,7 @@
             btnJournal = new Button();
             button13 = new Button();
             panel1.SuspendLayout();
-            panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(26, 133);
-            label3.Margin = new Padding(4, 0, 4, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(65, 17);
-            label3.TabIndex = 3;
-            label3.Text = "Jewellers";
-            label3.Visible = false;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(-4, 111);
-            label2.Margin = new Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(118, 19);
-            label2.TabIndex = 3;
-            label2.Text = "Bhagya laxmi";
-            label2.Visible = false;
-            label2.Click += label2_Click;
             // 
             // button15
             // 
@@ -460,37 +427,14 @@
             button1.Size = new Size(230, 42);
             button1.TabIndex = 4;
             button1.Text = "   Home";
-            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             button1.TextImageRelation = TextImageRelation.ImageBeforeText;
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // panel3
-            // 
-            panel3.BackColor = Color.Goldenrod;
-            panel3.Controls.Add(label3);
-            panel3.Controls.Add(label2);
-            panel3.Controls.Add(pictureBox1);
-            panel3.Location = new Point(284, 0);
-            panel3.Margin = new Padding(4, 3, 4, 3);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(130, 165);
-            panel3.TabIndex = 10;
-            panel3.Paint += panel3_Paint;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Margin = new Padding(4, 3, 4, 3);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(117, 58);
-            pictureBox1.TabIndex = 4;
-            pictureBox1.TabStop = false;
-            // 
             // panel4
             // 
             panel4.BackColor = Color.Goldenrod;
-            panel4.Location = new Point(428, 63);
+            panel4.Location = new Point(263, 51);
             panel4.Margin = new Padding(4, 3, 4, 3);
             panel4.Name = "panel4";
             panel4.Size = new Size(290, 3);
@@ -500,7 +444,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 20.25F, FontStyle.Bold);
-            label1.Location = new Point(420, 21);
+            label1.Location = new Point(255, 17);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(159, 32);
@@ -511,10 +455,10 @@
             // 
             MainWindow.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             MainWindow.BackColor = Color.Transparent;
-            MainWindow.Location = new Point(255, 172);
+            MainWindow.Location = new Point(255, 121);
             MainWindow.Margin = new Padding(4, 3, 4, 3);
             MainWindow.Name = "MainWindow";
-            MainWindow.Size = new Size(1016, 628);
+            MainWindow.Size = new Size(1016, 679);
             MainWindow.TabIndex = 25;
             MainWindow.Paint += MainWindow_Paint;
             // 
@@ -527,7 +471,7 @@
             btnPayment.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnPayment.ForeColor = Color.White;
             btnPayment.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPayment.Location = new Point(428, 77);
+            btnPayment.Location = new Point(263, 73);
             btnPayment.Margin = new Padding(4, 3, 4, 3);
             btnPayment.Name = "btnPayment";
             btnPayment.Size = new Size(156, 40);
@@ -547,7 +491,7 @@
             btnContra.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnContra.ForeColor = Color.White;
             btnContra.ImageAlign = ContentAlignment.MiddleLeft;
-            btnContra.Location = new Point(916, 77);
+            btnContra.Location = new Point(751, 73);
             btnContra.Margin = new Padding(4, 3, 4, 3);
             btnContra.Name = "btnContra";
             btnContra.Size = new Size(155, 42);
@@ -567,7 +511,7 @@
             btnReceipt.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnReceipt.ForeColor = Color.White;
             btnReceipt.ImageAlign = ContentAlignment.MiddleLeft;
-            btnReceipt.Location = new Point(592, 77);
+            btnReceipt.Location = new Point(427, 73);
             btnReceipt.Margin = new Padding(4, 3, 4, 3);
             btnReceipt.Name = "btnReceipt";
             btnReceipt.Size = new Size(155, 42);
@@ -587,7 +531,7 @@
             btnJournal.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnJournal.ForeColor = Color.White;
             btnJournal.ImageAlign = ContentAlignment.MiddleLeft;
-            btnJournal.Location = new Point(754, 77);
+            btnJournal.Location = new Point(589, 73);
             btnJournal.Margin = new Padding(4, 3, 4, 3);
             btnJournal.Name = "btnJournal";
             btnJournal.Size = new Size(155, 42);
@@ -634,9 +578,7 @@
             Controls.Add(panel2);
             Controls.Add(button13);
             Controls.Add(panel1);
-            Controls.Add(panel3);
             ForeColor = SystemColors.ControlText;
-            FormBorderStyle = FormBorderStyle.SizableToolWindow;
             Margin = new Padding(4, 3, 4, 3);
             Name = "MainDashboard";
             RightToLeft = RightToLeft.No;
@@ -646,19 +588,12 @@
             Load += MainDashboard_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
@@ -670,7 +605,6 @@
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel SidePanel;

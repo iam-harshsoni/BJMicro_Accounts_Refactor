@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BJMicro_Accounts_Refactor.U
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BJMicro_Accounts_Refactor.Core", "BJMicro_Accounts_Refactor.Application\BJMicro_Accounts_Refactor.Core.csproj", "{39497703-4C2B-4003-99B3-5B4F7B09406D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BJMicroAcc_Refactor.API", "BJMicroAcc_Refactor.API\BJMicroAcc_Refactor.API.csproj", "{2B0F7036-03D5-4752-8D21-7B218FE143A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{39497703-4C2B-4003-99B3-5B4F7B09406D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39497703-4C2B-4003-99B3-5B4F7B09406D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39497703-4C2B-4003-99B3-5B4F7B09406D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B0F7036-03D5-4752-8D21-7B218FE143A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B0F7036-03D5-4752-8D21-7B218FE143A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B0F7036-03D5-4752-8D21-7B218FE143A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B0F7036-03D5-4752-8D21-7B218FE143A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

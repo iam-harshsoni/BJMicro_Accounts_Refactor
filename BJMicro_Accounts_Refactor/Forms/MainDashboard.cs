@@ -9,17 +9,22 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BJMicro_Accounts_Refactor.ViewModels;
 using BJMicro_Accounts_Refactor.UserControls;
+using BJMicro_Accounts_Refactor.Core.Services.Interfaces;
 
 namespace BJMicro_Accounts_Refactor.Forms
 {
     public partial class MainDashboard : Form
     {
         string userName;
-        public MainDashboard(string LoginName)
+
+        private readonly IDailyRateService _dailyRateService;
+
+        public MainDashboard(string LoginName, IDailyRateService dailyRateService)
         {
             InitializeComponent();
             SidePanel.Height = button1.Height;
             SidePanel.Top = button1.Top;
+            _dailyRateService = dailyRateService;
 
             userName = LoginName;
         }
@@ -43,7 +48,7 @@ namespace BJMicro_Accounts_Refactor.Forms
             SidePanel.Height = button1.Height;
             SidePanel.Top = button1.Top;
 
-            DashBoard db = new DashBoard(userName);
+            DashBoard db = new DashBoard(userName, _dailyRateService);
             db.Dock = DockStyle.Fill;
             MainWindow.Controls.Add(db);
             db.Show();
@@ -81,7 +86,7 @@ namespace BJMicro_Accounts_Refactor.Forms
             SidePanel.Height = button1.Height;
             SidePanel.Top = button1.Top;
 
-            DashBoard db = new DashBoard(userName);
+            DashBoard db = new DashBoard(userName, _dailyRateService);
             db.Dock = DockStyle.Fill;
             MainWindow.Controls.Add(db);
             db.Show();

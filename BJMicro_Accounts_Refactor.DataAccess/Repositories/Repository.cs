@@ -57,6 +57,23 @@ public class Repository<T> : IRepository<T> where T : class
         return await query.ToListAsync();
     }
 
+    public async Task<IEnumerable<T>> GetAllAsync(Expression<Func<T, bool>> filter, string? includeProperties = null)
+    {
+        IQueryable<T> query = dbSet;
+        query = query.Where(filter);
+
+        if (!string.IsNullOrEmpty(includeProperties))
+        {
+            foreach (var property in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                query = query.Include(property);
+            }
+        }
+
+        return await query.ToListAsync();
+    }
+
+
     public void Remove(T entity)
     {
         dbSet.Remove(entity);

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BJMicro_Accounts_Refactor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f4490dc5581b3d8c3cc0e1073fa356fc73ca613f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c1be9bb2f00a0d17fa600b93a9a34e2c7053f0ba")]
 [assembly: System.Reflection.AssemblyProductAttribute("BJMicro_Accounts_Refactor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BJMicro_Accounts_Refactor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

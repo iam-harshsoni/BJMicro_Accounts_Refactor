@@ -5,7 +5,8 @@ using BJMicro_Accounts_Refactor.Core.Services.Interfaces;
 using BJMicro_Accounts_Refactor.DataAccess.Repositories;
 using BJMicro_Accounts_Refactor.DataAccess.Repositories.IRepository;
 using BJMicro_Accounts_Refactor.DataAccess.Data;
-using BJMicro_Accounts_Refactor.Forms; 
+using BJMicro_Accounts_Refactor.Forms;
+using Microsoft.Extensions.Configuration;
 
 namespace BJMicro_Accounts_Refactor
 {
@@ -14,32 +15,45 @@ namespace BJMicro_Accounts_Refactor
         [STAThread]
         static void Main()
         {
-            // Set compatible text rendering before the form is created
             Application.SetCompatibleTextRenderingDefault(false);
-
             ApplicationConfiguration.Initialize();
 
             var services = new ServiceCollection();
 
-            // 1. Register DbContext
-            services.AddDbContext<MicroAccountsContext>(options =>
-            {
-                options.UseSqlServer("YourConnectionStringHere");
-            });
-
-            // 2. Register Repository and Services
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
-            services.AddScoped<IDailyRateService, DailyRateService>();
-
-            services.AddScoped<DailyRates>();
+            ConfigureServices(services);
 
             var serviceProvider = services.BuildServiceProvider();
 
-            var dailyRateService = serviceProvider.GetRequiredService<IDailyRateService>();
-
-            var dailyRatesForm = new DailyRates("harsh", 0, 0, dailyRateService);
- 
-            Application.Run(dailyRatesForm);
+            using (var scope = serviceProvider.CreateScope())
+            {
+                var dailyRateService = scope.ServiceProvider.GetRequiredService<IDailyRateService>();
+                var mainDashboard = new MainDashboard("Harsh", dailyRateService);
+                Application.Run(mainDashboard);
+            }
         }
+        private static void ConfigureServices(IServiceCollection services)
+        {
+            var configuration = new ConfigurationBuilder()
+                .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+                .AddJsonFile("appsettings.json", optional: false)
+                .Build();
+
+            services.AddSingleton<IConfiguration>(configuration);
+
+            services.AddDbContext<MicroAccountsContext>(options =>
+                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")),
+                ServiceLifetime.Scoped);
+
+            // Register Repositories and Services
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddSingleton<IDailyRateService, DailyRateService>();
+
+            // Forms
+            services.AddScoped<MainDashboard>();
+            services.AddScoped<DailyGoldRates>();
+
+            // (Optional) Logging, EmailServices, other utilities
+        }
+
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace BJMicro_Accounts_Refactor.Forms
 {
-    partial class DailyRates
+    partial class DailyGoldRates
     {
         /// <summary>
         /// Required designer variable.

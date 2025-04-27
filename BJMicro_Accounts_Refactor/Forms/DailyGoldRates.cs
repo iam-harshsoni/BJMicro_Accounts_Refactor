@@ -16,14 +16,14 @@ using Microsoft.Data.SqlClient;
 
 namespace BJMicro_Accounts_Refactor.Forms
 {
-    public partial class DailyRates : Form
+    public partial class DailyGoldRates : Form
     {
         string userName;
 
         private readonly IDailyRateService _dailyRateService;
 
         int passedId, types;
-        public DailyRates(string loginName,
+        public DailyGoldRates(string loginName,
             int id,
             int type,
             IDailyRateService dailyRateService)
@@ -41,7 +41,7 @@ namespace BJMicro_Accounts_Refactor.Forms
         {
             if (types == 0)
             {
-                MainDashboard mm = new MainDashboard(userName);
+                MainDashboard mm = new MainDashboard(userName, _dailyRateService);
                 mm.Show();
                 this.Close();
             }
@@ -182,6 +182,7 @@ namespace BJMicro_Accounts_Refactor.Forms
                         await _dailyRateService.AddAsync(CreateDailyRateFromInputs());
                         MessageBox.Show("Record Successfully Added!");
                     }
+
                     else
                     {
                         var result = MessageBox.Show("Are you sure you want to update today's Rates?", "Update Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
@@ -194,8 +195,25 @@ namespace BJMicro_Accounts_Refactor.Forms
                             await _dailyRateService.UpdateAsync(existingRate);
 
                         }
+                    } 
+                }
+                else
+                {
+                    var existingRate = await _dailyRateService.GetByIdAsync(passedId);
+
+                    if (existingRate != null)
+                    {
+                        UpdateDailyRateFromInputs(existingRate);
+                        await _dailyRateService.UpdateAsync(existingRate);
+
+                        MessageBox.Show("Record Successfully Updated!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Record not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+                clear();
             }
             catch (Exception ex)
             {

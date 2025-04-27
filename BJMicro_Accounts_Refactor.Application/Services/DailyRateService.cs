@@ -7,6 +7,7 @@ using BJMicro_Accounts_Refactor.Core.DTOs;
 using BJMicro_Accounts_Refactor.Core.Mappers;
 using BJMicro_Accounts_Refactor.Core.Services.Interfaces;
 using BJMicro_Accounts_Refactor.DataAccess.Repositories.IRepository;
+using BJMicro_Accounts_Refactor.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace BJMicro_Accounts_Refactor.Core.Services
@@ -69,6 +70,32 @@ namespace BJMicro_Accounts_Refactor.Core.Services
             {
                 DailyRateMapper.MapToEntityForUpdate(entity, dto);
                 _unitOfWork.DailyRates.Update(entity);
+                await _unitOfWork.SaveAsync();
+            }
+        }
+
+        public async Task<IEnumerable<DailyRateDto>> GetRatesByDateRange(DateTime fromDate, DateTime toDate)
+        {
+            var entities = await _unitOfWork.DailyRates.GetAllAsync(x => x.Date >= fromDate && x.Date <= toDate);
+
+            return entities.Select(x => DailyRateMapper.ToDto(x)).ToList();
+
+        }
+
+        public async Task AddOrUpdate(DailyRateDto rate)
+        {
+            var existingData = await _unitOfWork.DailyRates.GetAsync(x => x.Date == rate.Date);
+
+            if (existingData != null)
+            {
+                var entity = DailyRateMapper.MapToEntityForCreate(rate);
+                await _unitOfWork.DailyRates.AddAsync(entity);
+                await _unitOfWork.SaveAsync();
+            }
+            else
+            {
+                DailyRateMapper.MapToEntityForUpdate(existingData, rate);
+                _unitOfWork.DailyRates.Update(existingData);
                 await _unitOfWork.SaveAsync();
             }
         }
