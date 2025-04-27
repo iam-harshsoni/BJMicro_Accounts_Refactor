@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BJMicro_Accounts_Refactor.Utils")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c73f29c92fa3b43e4965aee020c12fe747728938")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+deedeeb85743a1d27949c4d72d70948e15ffd1df")]
 [assembly: System.Reflection.AssemblyProductAttribute("BJMicro_Accounts_Refactor.Utils")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BJMicro_Accounts_Refactor.Utils")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

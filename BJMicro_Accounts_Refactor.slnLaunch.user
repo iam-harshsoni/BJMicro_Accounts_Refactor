@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "BJMicro_Accounts_Refactor\\BJMicro_Accounts_Refactor.csproj",
+        "Action": "Start",
+        "DebugTarget": "BJMicro_Accounts_Refactor"
+      },
+      {
+        "Path": "BJMicroAcc_Refactor.API\\BJMicroAcc_Refactor.API.csproj",
+        "Action": "Start",
+        "DebugTarget": "https"
+      }
+    ]
+  }
+]
