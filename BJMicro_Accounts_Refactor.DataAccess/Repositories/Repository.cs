@@ -33,9 +33,9 @@ public class Repository<T> : IRepository<T> where T : class
         if (!string.IsNullOrEmpty(includeProperties))
         {
             foreach (var includProp in includeProperties
-                .Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                .Split([','], StringSplitOptions.RemoveEmptyEntries))
             {
-                query = query.Include(includProp);
+                query = query.Include(includProp).AsNoTracking();
             }
         }
 
@@ -48,9 +48,9 @@ public class Repository<T> : IRepository<T> where T : class
 
         if (!string.IsNullOrEmpty(includeProperties))
         {
-            foreach (var property in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+            foreach (var property in includeProperties.Split([','], StringSplitOptions.RemoveEmptyEntries))
             {
-                query = query.Include(property);
+                query = query.Include(property).AsNoTracking();
             }
         }
 
@@ -64,9 +64,9 @@ public class Repository<T> : IRepository<T> where T : class
 
         if (!string.IsNullOrEmpty(includeProperties))
         {
-            foreach (var property in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+            foreach (var property in includeProperties.Split([','], StringSplitOptions.RemoveEmptyEntries))
             {
-                query = query.Include(property);
+                query = query.Include(property).AsNoTracking();
             }
         }
 

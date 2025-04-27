@@ -16,9 +16,9 @@ namespace BJMicroAcc_Refactor.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll([FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 10)
         {
-            var rates = await _dailyRateService.GetAllAsync();
+            var rates = await _dailyRateService.GetAllAsync(pageNumber, pageSize);
             return Ok(rates);
         }
 
@@ -49,6 +49,9 @@ namespace BJMicroAcc_Refactor.API.Controllers
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateDailyRateDto rate)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             if (rate == null) return BadRequest();
             await _dailyRateService.AddAsync(rate);
             return Ok();
@@ -57,6 +60,9 @@ namespace BJMicroAcc_Refactor.API.Controllers
         [HttpPut()]
         public async Task<IActionResult> Update([FromBody] UpdateDailyRateDto rate)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             if (rate == null) return BadRequest();
 
             await _dailyRateService.UpdateAsync(rate);

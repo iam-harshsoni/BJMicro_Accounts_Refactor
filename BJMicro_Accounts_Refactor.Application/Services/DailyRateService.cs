@@ -23,9 +23,15 @@ namespace BJMicro_Accounts_Refactor.Core.Services
 
 
         //Get all ( List all )
-        public async Task<IEnumerable<DailyRateDto>> GetAllAsync()
+        public async Task<IEnumerable<DailyRateDto>> GetAllAsync(int pageNumber, int pageSize)
         {
-            var entities = await _unitOfWork.DailyRates.GetAllAsync();
+            var allEntities = await _unitOfWork.DailyRates.GetAllAsync();
+            
+            var entities = allEntities
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
+ 
             return entities.Select(x => x.ToDto()).ToList();
         }
 
@@ -66,19 +72,30 @@ namespace BJMicro_Accounts_Refactor.Core.Services
         //Delete
         public async Task DeleteAsync(long id)
         {
-            var entity = await _unitOfWork.DailyRates.GetAsync(x => x.Id == id);
+            try
+            {
 
-            // Check if the entity exists before attempting to remove it
-            if (entity != null)
-            {
-                _unitOfWork.DailyRates.Remove(entity);
-                await _unitOfWork.SaveAsync(); // Don't forget to save changes!
+                var entity = await _unitOfWork.DailyRates.GetAsync(x => x.Id == id);
+
+                // Check if the entity exists before attempting to remove it
+                if (entity != null)
+                {
+                    _unitOfWork.DailyRates.Remove(entity);
+                    await _unitOfWork.SaveAsync(); // Don't forget to save changes!
+                }
+                else
+                {
+                    // Handle the case where the entity doesn't exist (optional)
+                    throw new KeyNotFoundException($"No DailyRate found with ID: {id}");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                // Handle the case where the entity doesn't exist (optional)
-                throw new KeyNotFoundException($"No DailyRate found with ID: {id}");
+                // Log the exception for diagnostic purposes
+                Console.Error.WriteLine($"Error deleting DailyRate: {ex.Message}");
+                throw; // Optionally rethrow the exception if necessary
             }
+
         }
 
 
