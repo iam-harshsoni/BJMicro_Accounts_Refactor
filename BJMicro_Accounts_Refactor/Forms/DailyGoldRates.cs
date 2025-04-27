@@ -1,20 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Net.Http.Json;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Net.Http.Json;
 using BJMicro_Accounts_Refactor.App_Code;
 using BJMicro_Accounts_Refactor.Core.DTOs;
-using BJMicro_Accounts_Refactor.Core.Services;
-using BJMicro_Accounts_Refactor.Core.Services.Interfaces;
-using BJMicro_Accounts_Refactor.Domain.Entities;
 using BJMicro_Accounts_Refactor.Helper;
-using Microsoft.Data.SqlClient;
 
 namespace BJMicro_Accounts_Refactor.Forms
 {

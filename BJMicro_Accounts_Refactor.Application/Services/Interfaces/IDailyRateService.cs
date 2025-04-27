@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BJMicro_Accounts_Refactor.Core.DTOs;
-using BJMicro_Accounts_Refactor.Domain.Entities;
+﻿using BJMicro_Accounts_Refactor.Core.DTOs;
 
 namespace BJMicro_Accounts_Refactor.Core.Services.Interfaces
 {

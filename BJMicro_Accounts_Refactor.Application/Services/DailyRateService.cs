@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BJMicro_Accounts_Refactor.Core.DTOs;
+﻿using BJMicro_Accounts_Refactor.Core.DTOs;
 using BJMicro_Accounts_Refactor.Core.Mappers;
 using BJMicro_Accounts_Refactor.Core.Services.Interfaces;
 using BJMicro_Accounts_Refactor.DataAccess.Repositories.IRepository;
-using BJMicro_Accounts_Refactor.Domain.Entities;
-using Microsoft.EntityFrameworkCore;
+
 
 namespace BJMicro_Accounts_Refactor.Core.Services
 {
@@ -26,7 +20,7 @@ namespace BJMicro_Accounts_Refactor.Core.Services
         public async Task<IEnumerable<DailyRateDto>> GetAllAsync(int pageNumber, int pageSize)
         {
             var allEntities = await _unitOfWork.DailyRates.GetAllAsync();
-            
+
             var entities = allEntities
                 .Skip((pageNumber - 1) * pageSize)
                 .Take(pageSize)
