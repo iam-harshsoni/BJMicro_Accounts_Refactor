@@ -1,0 +1,6 @@
+@BJMicroAcc_Refactor.API_HostAddress = http://localhost:5122
+
+GET {{BJMicroAcc_Refactor.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

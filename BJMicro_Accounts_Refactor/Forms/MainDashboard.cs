@@ -18,13 +18,13 @@ namespace BJMicro_Accounts_Refactor.Forms
         string userName;
 
         private readonly IDailyRateService _dailyRateService;
-
-        public MainDashboard(string LoginName, IDailyRateService dailyRateService)
+        private readonly HttpClient _httpClient;
+        public MainDashboard(string LoginName, HttpClient httpClient)
         {
             InitializeComponent();
             SidePanel.Height = button1.Height;
             SidePanel.Top = button1.Top;
-            _dailyRateService = dailyRateService;
+            _httpClient = httpClient;
 
             userName = LoginName;
         }
@@ -48,7 +48,7 @@ namespace BJMicro_Accounts_Refactor.Forms
             SidePanel.Height = button1.Height;
             SidePanel.Top = button1.Top;
 
-            DashBoard db = new DashBoard(userName, _dailyRateService);
+            DashBoard db = new DashBoard(userName, _httpClient);
             db.Dock = DockStyle.Fill;
             MainWindow.Controls.Add(db);
             db.Show();
@@ -86,7 +86,7 @@ namespace BJMicro_Accounts_Refactor.Forms
             SidePanel.Height = button1.Height;
             SidePanel.Top = button1.Top;
 
-            DashBoard db = new DashBoard(userName, _dailyRateService);
+            DashBoard db = new DashBoard(userName, _httpClient);
             db.Dock = DockStyle.Fill;
             MainWindow.Controls.Add(db);
             db.Show();

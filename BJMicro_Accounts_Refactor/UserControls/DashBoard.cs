@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,16 +20,18 @@ namespace BJMicro_Accounts_Refactor.UserControls
 {
     public partial class DashBoard : UserControl
     {
-        private readonly IDailyRateService _dailyRateService;
+        private readonly HttpClient _httpClient;
         AmtFormatting amtFormat = new AmtFormatting();
         string passedUname;
+        private const string ApiBaseUrl = "https://localhost:7039/api/dailyrates"; // Replace with your API URL
+        private readonly string _dailyRatesUrl;
 
-
-        public DashBoard(string uName, IDailyRateService dailyRateService)
+        public DashBoard(string uName, HttpClient httpClient)
         {
             InitializeComponent();
             passedUname = uName;
-            _dailyRateService = dailyRateService;
+            _httpClient = httpClient;
+            _dailyRatesUrl = AppConfig.GetModuleUrl("dailyrates");
         }
 
         private async void DashBoard_Load(object sender, EventArgs e)
@@ -57,24 +61,36 @@ namespace BJMicro_Accounts_Refactor.UserControls
         {
             DateTime todayDate = DateTime.Today;
 
-            var todaysRate = await _dailyRateService.GetByDateAsync(todayDate);
+            //var todaysRate = await _dailyRateService.GetByDateAsync(todayDate);
+            var response = await _httpClient.GetAsync($"{_dailyRatesUrl}/date/{todayDate:yyyy-MM-dd}");
 
-            if (todaysRate == null)
+            if (response.IsSuccessStatusCode)
             {
-                btnEnterRates.Enabled = true;
+                var todaysRate = await response.Content.ReadFromJsonAsync<DailyRateDto>();
+
+                if (todaysRate == null)
+                {
+                    btnEnterRates.Enabled = true;
+                }
+                else
+                {
+                    btnEnterRates.Enabled = false;
+
+                    lblFine.Text = amtFormat.comma(todaysRate.FineGold);
+                    lbl22C.Text = amtFormat.comma(todaysRate.TwentyTwoC);
+                    lbl23C.Text = amtFormat.comma(todaysRate.TwentyThreeC);
+                    lblhallMarkBuyBack.Text = amtFormat.comma(todaysRate.HallmarkBuyBack);
+                    lblHallMark.Text = amtFormat.comma(todaysRate.Hallmark);
+                    lblSilver.Text = amtFormat.comma(todaysRate.Silver);
+
+                }
             }
             else
             {
-                btnEnterRates.Enabled = false;
-
-                lblFine.Text = amtFormat.comma(todaysRate.FineGold);
-                lbl22C.Text = amtFormat.comma(todaysRate.TwentyTwoC);
-                lbl23C.Text = amtFormat.comma(todaysRate.TwentyThreeC);
-                lblhallMarkBuyBack.Text = amtFormat.comma(todaysRate.HallmarkBuyBack);
-                lblHallMark.Text = amtFormat.comma(todaysRate.Hallmark);
-                lblSilver.Text = amtFormat.comma(todaysRate.Silver);
-
+                btnEnterRates.Enabled = true;
+                MessageBox.Show("Failed to fetch today's rates.");
             }
+
         }
         private async Task BindGrid(IEnumerable<DailyRateDto> rates = null)
         {
@@ -84,9 +100,16 @@ namespace BJMicro_Accounts_Refactor.UserControls
 
                 if (rates == null)
                 {
-                    rates = await _dailyRateService.GetAllAsync();
+                    var response = await _httpClient.GetAsync(_dailyRatesUrl);
 
-                    rates = rates.OrderByDescending(x => x.Id).Take(8).ToList();
+                    if (response.IsSuccessStatusCode)
+                    {
+                        //rates = await _dailyRateService.GetAllAsync();
+
+                        rates = await response.Content.ReadFromJsonAsync<IEnumerable<DailyRateDto>>();
+
+                        rates = rates.OrderByDescending(x => x.Id).Take(8).ToList();
+                    }
 
                 }
 
@@ -102,6 +125,7 @@ namespace BJMicro_Accounts_Refactor.UserControls
                     hallmark = item.Hallmark ?? 0,
                     hallmarkBuyBack = item.HallmarkBuyBack ?? 0,
 
+                    // Formatted
                     fineGoldFormatted = amtFormat.comma(item.FineGold ?? 0),
                     twentyTwoCFormatted = amtFormat.comma(item.TwentyTwoC ?? 0),
                     twentyThreeCFormatted = amtFormat.comma(item.TwentyThreeC ?? 0),
@@ -137,9 +161,17 @@ namespace BJMicro_Accounts_Refactor.UserControls
                     return;
                 }
 
-                var filteredRates = await _dailyRateService.GetRatesByDateRange(fromDate, toDate);
+                //Fetching data in json as per the arguments
+                var response = await _httpClient.GetAsync($"{_dailyRatesUrl}/range?fromDate={fromDate:yyyy-MM-dd}&toDate={toDate:yyyy-MM-dd}");
 
-                await BindGrid(filteredRates);
+                if (response.IsSuccessStatusCode)
+                {
+                    // Converting / Serializing data from Json to multiple DTO Objects using IEnumerable as its a list of objects.
+                    var filteredRates = await response.Content.ReadFromJsonAsync<IEnumerable<DailyRateDto>>();
+                    await BindGrid(filteredRates);
+                }
+
+
             }
             catch (FormatException)
             {
@@ -153,7 +185,8 @@ namespace BJMicro_Accounts_Refactor.UserControls
 
         private async void btnEnterRates_Click(object sender, EventArgs e)
         {
-            DailyGoldRates dr = new DailyGoldRates(passedUname, 0, 1, _dailyRateService);
+            DailyGoldRates dr = new DailyGoldRates(passedUname, 0, 1, _httpClient);
+
             dr.ShowDialog();
             await BindGrid();
         }
@@ -173,7 +206,7 @@ namespace BJMicro_Accounts_Refactor.UserControls
                 {
                     var lID = Convert.ToInt32(dgDailyRateReport.CurrentRow.Cells[0].Value);
 
-                    DailyGoldRates acc = new DailyGoldRates(passedUname, lID, 1, _dailyRateService);
+                    DailyGoldRates acc = new DailyGoldRates(passedUname, lID, 1, _httpClient);
                     acc.ShowDialog();
                     await BindGrid();
                 }

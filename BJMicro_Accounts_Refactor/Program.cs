@@ -26,8 +26,8 @@ namespace BJMicro_Accounts_Refactor
 
             using (var scope = serviceProvider.CreateScope())
             {
-                var dailyRateService = scope.ServiceProvider.GetRequiredService<IDailyRateService>();
-                var mainDashboard = new MainDashboard("Harsh", dailyRateService);
+                var httpClient = scope.ServiceProvider.GetRequiredService<HttpClient>();
+                var mainDashboard = new MainDashboard("Harsh", httpClient);
                 Application.Run(mainDashboard);
             }
         }
@@ -40,9 +40,17 @@ namespace BJMicro_Accounts_Refactor
 
             services.AddSingleton<IConfiguration>(configuration);
 
-            services.AddDbContext<MicroAccountsContext>(options =>
-                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")),
-                ServiceLifetime.Scoped);
+            // Configure HttpClient
+            services.AddHttpClient("ApiClient", client =>
+            {
+                client.BaseAddress = new Uri(AppConfig.ApiBaseUrl);
+                client.DefaultRequestHeaders.Add("Accept", "application/json");
+            });
+
+
+            //services.AddDbContext<MicroAccountsContext>(options =>
+            //    options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")),
+            //    ServiceLifetime.Scoped);
 
             // Register Repositories and Services
             services.AddScoped<IUnitOfWork, UnitOfWork>();

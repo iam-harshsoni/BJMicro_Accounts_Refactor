@@ -86,7 +86,7 @@ namespace BJMicro_Accounts_Refactor.Core.Services
         {
             var existingData = await _unitOfWork.DailyRates.GetAsync(x => x.Date == rate.Date);
 
-            if (existingData != null)
+            if (existingData == null)
             {
                 var entity = DailyRateMapper.MapToEntityForCreate(rate);
                 await _unitOfWork.DailyRates.AddAsync(entity);

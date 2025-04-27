@@ -4,11 +4,13 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BJMicro_Accounts_Refactor.App_Code;
 using BJMicro_Accounts_Refactor.Core.DTOs;
+using BJMicro_Accounts_Refactor.Core.Services;
 using BJMicro_Accounts_Refactor.Core.Services.Interfaces;
 using BJMicro_Accounts_Refactor.Domain.Entities;
 using BJMicro_Accounts_Refactor.Helper;
@@ -18,30 +20,28 @@ namespace BJMicro_Accounts_Refactor.Forms
 {
     public partial class DailyGoldRates : Form
     {
-        string userName;
 
-        private readonly IDailyRateService _dailyRateService;
+        private readonly HttpClient _httpClient;
+        private readonly string _dailyRatesUrl;
+        private string userName;
+        private int passedId, types;
 
-        int passedId, types;
-        public DailyGoldRates(string loginName,
-            int id,
-            int type,
-            IDailyRateService dailyRateService)
+
+        public DailyGoldRates(string loginName, int id, int type, HttpClient httpClient)
         {
             InitializeComponent();
-
             userName = loginName;
             passedId = id;
             types = type;
-
-            _dailyRateService = dailyRateService;
+            _httpClient = httpClient;
+            _dailyRatesUrl = AppConfig.GetModuleUrl("dailyrates");
         }
 
         private void button13_Click(object sender, EventArgs e)
         {
             if (types == 0)
             {
-                MainDashboard mm = new MainDashboard(userName, _dailyRateService);
+                MainDashboard mm = new MainDashboard(userName, _httpClient);
                 mm.Show();
                 this.Close();
             }
@@ -171,49 +171,85 @@ namespace BJMicro_Accounts_Refactor.Forms
                 if (!FormValidationHelper.ValidateRequiredField(txt18c, errorProvider1, lblError, panel3, "Enter item code.")) return;
                 if (!FormValidationHelper.ValidateRequiredField(txtSilver, errorProvider1, lblError, panel3, "Enter item code.")) return;
 
+                var newRate = CreateDailyRateFromInputs();
+
                 if (passedId == 0)
                 {
                     var todaysDate = DateTime.Now.Date;
 
-                    var existingRate = await _dailyRateService.GetByDateAsync(todaysDate);
+                    var response = await _httpClient.GetAsync($"{_dailyRatesUrl}/date/{todaysDate:yyyy-MM-dd}");
 
-                    if (existingRate == null)
+                    if (response.IsSuccessStatusCode)
                     {
-                        await _dailyRateService.AddAsync(CreateDailyRateFromInputs());
-                        MessageBox.Show("Record Successfully Added!");
-                    }
+                        var existingRate = await response.Content.ReadFromJsonAsync<DailyRateDto>();
 
-                    else
-                    {
-                        var result = MessageBox.Show("Are you sure you want to update today's Rates?", "Update Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                        if (result == DialogResult.OK)
+                        if (existingRate == null)
                         {
-                            // Populate the `existingRate` DTO using the inputs
-                            UpdateDailyRateFromInputs(existingRate);
-
-                            // Now pass the populated `existingRate` DTO to the service method
-                            await _dailyRateService.UpdateAsync(existingRate);
-
+                            var createResponse = await _httpClient.PostAsJsonAsync(_dailyRatesUrl, newRate);
+                            if (createResponse.IsSuccessStatusCode)
+                            {
+                                MessageBox.Show("Record Successfully Added!");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Failed to add record.");
+                            }
                         }
-                    } 
+                        else
+                        {
+                            var result = MessageBox.Show("Are you sure you want to update today's Rates?", "Update Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                            if (result == DialogResult.OK)
+                            {
+                                // Populate the `existingRate` DTO using the inputs
+                                UpdateDailyRateFromInputs(existingRate);
+
+                                var updateResponse = await _httpClient.PostAsJsonAsync(_dailyRatesUrl, existingRate);
+                                if (updateResponse.IsSuccessStatusCode)
+                                {
+                                    MessageBox.Show("Record Successfully Updated!");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Failed to update record.");
+                                }
+
+                            }
+                        }
+                    }
                 }
                 else
                 {
-                    var existingRate = await _dailyRateService.GetByIdAsync(passedId);
+                    var response = await _httpClient.GetAsync($"{_dailyRatesUrl}/id/{passedId}");
 
-                    if (existingRate != null)
+                    if (response.IsSuccessStatusCode)
                     {
-                        UpdateDailyRateFromInputs(existingRate);
-                        await _dailyRateService.UpdateAsync(existingRate);
-
-                        MessageBox.Show("Record Successfully Updated!");
+                        var existingRate = await response.Content.ReadFromJsonAsync<DailyRateDto>();
+                        if (existingRate != null)
+                        {
+                            UpdateDailyRateFromInputs(existingRate);
+                            var updateResponse = await _httpClient.PostAsJsonAsync(_dailyRatesUrl, existingRate);
+                            if (updateResponse.IsSuccessStatusCode)
+                            {
+                                MessageBox.Show("Record Successfully Updated!");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Failed to update record.");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Record not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Record not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Failed to fetch record.");
                     }
+
                 }
                 clear();
+                this.Close();
             }
             catch (Exception ex)
             {
@@ -253,18 +289,41 @@ namespace BJMicro_Accounts_Refactor.Forms
         {
             try
             {
-               
-                DailyRateDto result;
+
+                DailyRateDto? result;
 
                 // If passedId > 0, get the record by passedId, else get today's record
                 if (passedId > 0)
                 {
-                    result = await _dailyRateService.GetByIdAsync(passedId);
+                    var response = await _httpClient.GetAsync($"{_dailyRatesUrl}/id/{passedId}");
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        result = await response.Content.ReadFromJsonAsync<DailyRateDto>();
+                    }
+                    else
+                    {
+                        result = null;
+                        MessageBox.Show("Failed to fetch record.");
+                    }
+
+
                 }
                 else
                 {
-                    var datetodayss = DateTime.Now.Date;
-                    result = await _dailyRateService.GetByDateAsync(datetodayss);
+                    var todayDate = DateTime.Now.Date;
+
+                    var response = await _httpClient.GetAsync($"{_dailyRatesUrl}/date/{todayDate:yyyy-MM-dd}");
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        result = await response.Content.ReadFromJsonAsync<DailyRateDto>();
+                    }
+                    else
+                    {
+                        result = null;
+                        MessageBox.Show("Failed to fetch today's rates.");
+                    }
                 }
 
                 if (result != null)

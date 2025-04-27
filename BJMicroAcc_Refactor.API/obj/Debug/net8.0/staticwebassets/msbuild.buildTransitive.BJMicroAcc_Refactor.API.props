@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\BJMicroAcc_Refactor.API.props" />
+</Project>
