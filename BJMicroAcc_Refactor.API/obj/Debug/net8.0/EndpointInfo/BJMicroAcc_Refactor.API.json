@@ -24,17 +24,46 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/DailyRateDto"
+                "$ref": "#/components/schemas/CreateDailyRateDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/DailyRateDto"
+                "$ref": "#/components/schemas/CreateDailyRateDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/DailyRateDto"
+                "$ref": "#/components/schemas/CreateDailyRateDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "DailyRates"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateDailyRateDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateDailyRateDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateDailyRateDto"
               }
             }
           }
@@ -164,7 +193,48 @@
   },
   "components": {
     "schemas": {
-      "DailyRateDto": {
+      "CreateDailyRateDto": {
+        "type": "object",
+        "properties": {
+          "fineGold": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "hallmark": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "hallmarkBuyBack": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "twentyTwoC": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "twentyThreeC": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "eighteenC": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "silver": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateDailyRateDto": {
         "type": "object",
         "properties": {
           "id": {
@@ -204,11 +274,6 @@
           "silver": {
             "type": "number",
             "format": "double",
-            "nullable": true
-          },
-          "date": {
-            "type": "string",
-            "format": "date-time",
             "nullable": true
           }
         },

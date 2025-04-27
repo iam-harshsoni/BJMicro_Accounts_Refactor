@@ -158,3 +158,4 @@ D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Acc
 D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor\bin\Debug\net8.0-windows\Microsoft.Extensions.Http.dll
 D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.ConfigurationExtensions.dll
 D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor\bin\Debug\net8.0-windows\System.Diagnostics.DiagnosticSource.dll
+D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor\obj\Debug\net8.0-windows\BJMicro_Accounts_Refactor.Forms.ItemCategoryMaster.resources

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BJMicroAcc_Refactor.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+deedeeb85743a1d27949c4d72d70948e15ffd1df")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a1ce4ef6a7468bfcc5d3907747af50ab1b84263c")]
 [assembly: System.Reflection.AssemblyProductAttribute("BJMicroAcc_Refactor.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BJMicroAcc_Refactor.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,21 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BJMicro_Accounts_Refactor.Core.DTOs
+﻿namespace BJMicro_Accounts_Refactor.Core.DTOs
 {
-    public class DailyRateDto
-    {
-        public long Id { get; set; }
-        public decimal? FineGold { get; set; }
-        public decimal? Hallmark { get; set; }
-        public decimal? HallmarkBuyBack { get; set; }
-        public decimal? TwentyTwoC { get; set; }
-        public decimal? TwentyThreeC { get; set; }
-        public decimal? EighteenC { get; set; }
-        public decimal? Silver { get; set; }
-        public DateTime? Date { get; set; } 
-    }
+    public record DailyRateDto(
+        long Id,
+        decimal? FineGold,
+        decimal? Hallmark,
+        decimal? HallmarkBuyBack,
+        decimal? TwentyTwoC,
+        decimal? TwentyThreeC,
+        decimal? EighteenC,
+        decimal? Silver,
+        DateTime? Date
+    );
+
+    public record CreateDailyRateDto(
+        decimal? FineGold,
+        decimal? Hallmark,
+        decimal? HallmarkBuyBack,
+        decimal? TwentyTwoC,
+        decimal? TwentyThreeC,
+        decimal? EighteenC,
+        decimal? Silver
+
+    //add Createdate and UpdateDate value in DTO Mapping for 'Update Feature'
+    );
+
+    public record UpdateDailyRateDto(
+        long Id,
+        decimal? FineGold,
+        decimal? Hallmark,
+        decimal? HallmarkBuyBack,
+        decimal? TwentyTwoC,
+        decimal? TwentyThreeC,
+        decimal? EighteenC,
+        decimal? Silver
+
+    //add UpdateDate value in DTO Mapping for 'Update Feature'
+    );
+
+
 }

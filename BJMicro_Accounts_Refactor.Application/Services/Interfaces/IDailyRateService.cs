@@ -13,11 +13,11 @@ namespace BJMicro_Accounts_Refactor.Core.Services.Interfaces
         Task<IEnumerable<DailyRateDto>> GetAllAsync();
         Task<DailyRateDto?> GetByIdAsync(long id);
         Task<DailyRateDto?> GetByDateAsync(DateTime todaysDate);
-        Task AddAsync(DailyRateDto dto);
-        Task UpdateAsync(DailyRateDto dto);
+        Task AddAsync(CreateDailyRateDto dto);
+        Task UpdateAsync(UpdateDailyRateDto dto);
         Task DeleteAsync(long id);
         Task<IEnumerable<DailyRateDto>> GetRatesByDateRange(DateTime fromDate, DateTime toDate);
 
-        Task AddOrUpdate(DailyRateDto rate);
+        //  Task AddOrUpdate(DailyRateDto rate);
     }
 }

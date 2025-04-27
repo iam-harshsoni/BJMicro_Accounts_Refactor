@@ -41,19 +41,28 @@ namespace BJMicroAcc_Refactor.API.Controllers
         [HttpGet("range")]
         public async Task<IActionResult> GetByDateRange(DateTime fromDate, DateTime toDate)
         {
-            var rates= await _dailyRateService.GetRatesByDateRange(fromDate, toDate);
+            var rates = await _dailyRateService.GetRatesByDateRange(fromDate, toDate);
             if (rates == null) return NotFound();
             return Ok(rates);
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddOrUpdate([FromBody] DailyRateDto rate)
+        public async Task<IActionResult> Create([FromBody] CreateDailyRateDto rate)
         {
             if (rate == null) return BadRequest();
-            await _dailyRateService.AddOrUpdate(rate);
+            await _dailyRateService.AddAsync(rate);
             return Ok();
         }
 
-         
+        [HttpPut()]
+        public async Task<IActionResult> Update([FromBody] UpdateDailyRateDto rate)
+        {
+            if (rate == null) return BadRequest();
+
+            await _dailyRateService.UpdateAsync(rate);
+            return Ok();
+        }
+
+
     }
 }

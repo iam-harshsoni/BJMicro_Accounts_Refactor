@@ -185,6 +185,7 @@ namespace BJMicro_Accounts_Refactor.Forms
 
                         if (existingRate == null)
                         {
+                            // Create new daily rate
                             var createResponse = await _httpClient.PostAsJsonAsync(_dailyRatesUrl, newRate);
                             if (createResponse.IsSuccessStatusCode)
                             {
@@ -197,13 +198,19 @@ namespace BJMicro_Accounts_Refactor.Forms
                         }
                         else
                         {
-                            var result = MessageBox.Show("Are you sure you want to update today's Rates?", "Update Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                            // Ask for confirmation before updating today's rate
+                            var result = MessageBox.Show(
+                                "Are you sure you want to update today's Rates?",
+                                "Update Confirmation",
+                                MessageBoxButtons.OKCancel,
+                                MessageBoxIcon.Question);
+
                             if (result == DialogResult.OK)
                             {
                                 // Populate the `existingRate` DTO using the inputs
-                                UpdateDailyRateFromInputs(existingRate);
+                                var updateDto = CreateUpdateDailyRateDto(existingRate.Id);
 
-                                var updateResponse = await _httpClient.PostAsJsonAsync(_dailyRatesUrl, existingRate);
+                                var updateResponse = await _httpClient.PutAsJsonAsync(_dailyRatesUrl, existingRate);
                                 if (updateResponse.IsSuccessStatusCode)
                                 {
                                     MessageBox.Show("Record Successfully Updated!");
@@ -217,34 +224,20 @@ namespace BJMicro_Accounts_Refactor.Forms
                         }
                     }
                 }
-                else
+                else // Updating an existing record by ID
                 {
-                    var response = await _httpClient.GetAsync($"{_dailyRatesUrl}/id/{passedId}");
+                    // Create update DTO with passed ID
+                    var updateDto = CreateUpdateDailyRateDto(passedId);
 
-                    if (response.IsSuccessStatusCode)
+                    // Use PutAsJsonAsync for updates
+                    var updateResponse = await _httpClient.PutAsJsonAsync(_dailyRatesUrl, updateDto);
+                    if (updateResponse.IsSuccessStatusCode)
                     {
-                        var existingRate = await response.Content.ReadFromJsonAsync<DailyRateDto>();
-                        if (existingRate != null)
-                        {
-                            UpdateDailyRateFromInputs(existingRate);
-                            var updateResponse = await _httpClient.PostAsJsonAsync(_dailyRatesUrl, existingRate);
-                            if (updateResponse.IsSuccessStatusCode)
-                            {
-                                MessageBox.Show("Record Successfully Updated!");
-                            }
-                            else
-                            {
-                                MessageBox.Show("Failed to update record.");
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Record not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
+                        MessageBox.Show("Record Successfully Updated!");
                     }
                     else
                     {
-                        MessageBox.Show("Failed to fetch record.");
+                        MessageBox.Show("Failed to update record.");
                     }
 
                 }
@@ -258,31 +251,32 @@ namespace BJMicro_Accounts_Refactor.Forms
 
         }
 
-        private DailyRateDto CreateDailyRateFromInputs()
+        private CreateDailyRateDto CreateDailyRateFromInputs()
         {
-            return new DailyRateDto
-            {
-                FineGold = Convert.ToDecimal(txtFineGold.Text),
-                Hallmark = Convert.ToDecimal(txtHallMark.Text),
-                HallmarkBuyBack = Convert.ToDecimal(txtBuyBack.Text),
-                TwentyTwoC = Convert.ToDecimal(txt22c.Text),
-                TwentyThreeC = Convert.ToDecimal(txt23c.Text),
-                EighteenC = Convert.ToDecimal(txt18c.Text),
-                Silver = Convert.ToDecimal(txtSilver.Text),
-                Date = DateTime.Now.Date,
-            };
+            return new CreateDailyRateDto
+            (
+                Convert.ToDecimal(txtFineGold.Text),
+                Convert.ToDecimal(txtHallMark.Text),
+                Convert.ToDecimal(txtBuyBack.Text),
+                Convert.ToDecimal(txt22c.Text),
+                Convert.ToDecimal(txt23c.Text),
+                Convert.ToDecimal(txt18c.Text),
+                Convert.ToDecimal(txtSilver.Text)
+            );
         }
 
-        private void UpdateDailyRateFromInputs(DailyRateDto? rate)
+        private UpdateDailyRateDto CreateUpdateDailyRateDto(long id)
         {
-            rate.FineGold = Convert.ToDecimal(txtFineGold.Text);
-            rate.Hallmark = Convert.ToDecimal(txtHallMark.Text);
-            rate.HallmarkBuyBack = Convert.ToDecimal(txtBuyBack.Text);
-            rate.TwentyTwoC = Convert.ToDecimal(txt22c.Text);
-            rate.TwentyThreeC = Convert.ToDecimal(txt23c.Text);
-            rate.EighteenC = Convert.ToDecimal(txt18c.Text);
-            rate.Silver = Convert.ToDecimal(txtSilver.Text);
-            rate.Date = DateTime.Now.Date;
+            return new UpdateDailyRateDto(
+                id,
+                Convert.ToDecimal(txtFineGold.Text),
+                Convert.ToDecimal(txtHallMark.Text),
+                Convert.ToDecimal(txtBuyBack.Text),
+                Convert.ToDecimal(txt22c.Text),
+                Convert.ToDecimal(txt23c.Text),
+                Convert.ToDecimal(txt18c.Text),
+                Convert.ToDecimal(txtSilver.Text)
+            );
         }
 
         private async void DailyRates_Load(object sender, EventArgs e)

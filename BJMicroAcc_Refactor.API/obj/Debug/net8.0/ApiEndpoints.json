@@ -11,7 +11,7 @@
   },
   {
     "ContainingType": "BJMicroAcc_Refactor.API.Controllers.DailyRatesController",
-    "Method": "AddOrUpdate",
+    "Method": "Create",
     "RelativePath": "api/dailyrates",
     "HttpMethod": "POST",
     "IsController": true,
@@ -19,7 +19,23 @@
     "Parameters": [
       {
         "Name": "rate",
-        "Type": "BJMicro_Accounts_Refactor.Core.DTOs.DailyRateDto",
+        "Type": "BJMicro_Accounts_Refactor.Core.DTOs.CreateDailyRateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BJMicroAcc_Refactor.API.Controllers.DailyRatesController",
+    "Method": "Update",
+    "RelativePath": "api/dailyrates",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rate",
+        "Type": "BJMicro_Accounts_Refactor.Core.DTOs.UpdateDailyRateDto",
         "IsRequired": true
       }
     ],

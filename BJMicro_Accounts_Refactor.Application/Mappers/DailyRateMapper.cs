@@ -10,28 +10,27 @@ namespace BJMicro_Accounts_Refactor.Core.Mappers
 {
     public static class DailyRateMapper
     {
-        public static DailyRateDto ToDto(DailyRate entity)
+        public static DailyRateDto ToDto(this DailyRate entity)
         {
             return new DailyRateDto
-            {
-                Id = entity.Id,
-                FineGold = entity.FineGold,
-                Hallmark = entity.Hallmark,
-                HallmarkBuyBack = entity.HallmarkBuyBack,
-                TwentyTwoC=entity.TwentyTwoC,
-                TwentyThreeC   =entity.TwentyThreeC,
-                EighteenC  = entity.EighteenC,
-                Silver = entity.Silver,
-                Date = entity.Date
-
-            };
+            (
+                entity.Id,
+                entity.FineGold,
+                entity.Hallmark,
+                entity.HallmarkBuyBack,
+                entity.TwentyTwoC,
+                entity.TwentyThreeC,
+                entity.EighteenC,
+                entity.Silver,
+                entity.Date
+            );
         }
 
-        public static DailyRate MapToEntityForCreate(DailyRateDto dto)
+        public static DailyRate FromCreateDto(this CreateDailyRateDto dto)
         {
             return new DailyRate
             {
-                Id = dto.Id,
+                Date = DateTime.UtcNow,
                 FineGold = dto.FineGold,
                 Hallmark = dto.Hallmark,
                 HallmarkBuyBack = dto.HallmarkBuyBack,
@@ -39,14 +38,18 @@ namespace BJMicro_Accounts_Refactor.Core.Mappers
                 TwentyThreeC = dto.TwentyThreeC,
                 EighteenC = dto.EighteenC,
                 Silver = dto.Silver,
-                Date = dto.Date,
-                CreatedDate = DateTime.Now,
-                UpdatedDate = DateTime.Now,
+                CreatedDate = DateTime.UtcNow,
+                UpdatedDate = DateTime.UtcNow
             };
+
         }
 
-        public static void MapToEntityForUpdate(DailyRate? entity, DailyRateDto dto)
+         public static DailyRate FromUpdateDto(this UpdateDailyRateDto dto, DailyRate existingEntity = null)
         {
+            // If updating an existing entity, preserve its original properties
+            var entity = existingEntity ?? new DailyRate();
+            
+            entity.Id = dto.Id;
             entity.FineGold = dto.FineGold;
             entity.Hallmark = dto.Hallmark;
             entity.HallmarkBuyBack = dto.HallmarkBuyBack;
@@ -54,8 +57,9 @@ namespace BJMicro_Accounts_Refactor.Core.Mappers
             entity.TwentyThreeC = dto.TwentyThreeC;
             entity.EighteenC = dto.EighteenC;
             entity.Silver = dto.Silver;
-            entity.Date = dto.Date;
-            entity.UpdatedDate = DateTime.Now; // Only UpdatedDate is changed
+            entity.UpdatedDate = DateTime.UtcNow;
+            
+            return entity;
         }
     }
 }
