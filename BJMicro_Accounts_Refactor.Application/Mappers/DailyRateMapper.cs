@@ -39,7 +39,7 @@ namespace BJMicro_Accounts_Refactor.Core.Mappers
 
         }
 
-         public static DailyRate FromUpdateDto(this UpdateDailyRateDto dto, DailyRate existingEntity = null)
+        public static DailyRate FromUpdateDto(this UpdateDailyRateDto dto, DailyRate existingEntity = null)
         {
             // If updating an existing entity, preserve its original properties
             var entity = existingEntity ?? new DailyRate();
