@@ -2,14 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BJMicro_Accounts_Refactor.Application.Services.Interfaces;
+using BJMicro_Accounts_Refactor.Core.Services.Interfaces;
 using BJMicro_Accounts_Refactor.Core.DTOs;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BJMicroAcc_Refactor.API.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/category")]
     public class CategoryController(ICategoryService categoryService) : ControllerBase
     {
         private readonly ICategoryService _categoryService = categoryService;
@@ -123,7 +123,7 @@ namespace BJMicroAcc_Refactor.API.Controllers
                     return NotFound($"Category with ID {id} not found");
 
                 await _categoryService.DeleteAsync(id);
-                return Ok(new { success = true, message = "Category deleted successfully" });
+                return NoContent();
             }
             catch (Exception ex)
             {

@@ -1,15 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using BJMicro_Accounts_Refactor.ViewModels;
-using BJMicro_Accounts_Refactor.UserControls;
+﻿using BJMicro_Accounts_Refactor.UserControls;
 using BJMicro_Accounts_Refactor.Core.Services.Interfaces;
+using System.Windows.Forms;
 
 namespace BJMicro_Accounts_Refactor.Forms
 {

@@ -23,7 +23,6 @@ namespace BJMicro_Accounts_Refactor.UserControls
         private readonly HttpClient _httpClient;
         AmtFormatting amtFormat = new AmtFormatting();
         string passedUname;
-        private const string ApiBaseUrl = "https://localhost:7039/api/dailyrates"; // Replace with your API URL
         private readonly string _dailyRatesUrl;
 
         public DashBoard(string uName, HttpClient httpClient)
@@ -92,7 +91,7 @@ namespace BJMicro_Accounts_Refactor.UserControls
             }
 
         }
-        private async Task BindGrid(IEnumerable<DailyRateDto> rates = null)
+        private async Task BindGrid(IEnumerable<DailyRateDto>? rates = null)
         {
             try
             {

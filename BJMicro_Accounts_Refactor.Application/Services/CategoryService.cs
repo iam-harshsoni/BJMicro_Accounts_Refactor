@@ -2,14 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BJMicro_Accounts_Refactor.Application.Mappers;
-using BJMicro_Accounts_Refactor.Application.Services.Interfaces;
+using BJMicro_Accounts_Refactor.Core.Mappers;
+using BJMicro_Accounts_Refactor.Core.Services.Interfaces;
 using BJMicro_Accounts_Refactor.Core.DTOs;
 using BJMicro_Accounts_Refactor.DataAccess.Repositories;
 using BJMicro_Accounts_Refactor.DataAccess.Repositories.IRepository;
 using Microsoft.Identity.Client;
 
-namespace BJMicro_Accounts_Refactor.Application.Services
+namespace BJMicro_Accounts_Refactor.Core.Services
 {
     public class CategoryService(IUnitOfWork unitOfWork) : ICategoryService
     {

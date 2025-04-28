@@ -16,7 +16,7 @@ namespace BJMicro_Accounts_Refactor.Core.DTOs
 
     public record CreateDailyRateDto(
 
-        [Required(ErrorMessage = "FineGold is required.")] decimal?     ,
+        [Required(ErrorMessage = "FineGold is required.")] decimal? FineGold,
         [Required(ErrorMessage = "Hallmark is required.")] decimal? Hallmark,
         [Required(ErrorMessage = "HallmarkBuyBack is required.")] decimal? HallmarkBuyBack,
         [Required(ErrorMessage = "TwentyTwoC is required.")] decimal? TwentyTwoC,

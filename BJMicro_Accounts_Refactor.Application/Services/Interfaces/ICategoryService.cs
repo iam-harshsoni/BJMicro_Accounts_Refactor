@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using BJMicro_Accounts_Refactor.Core.DTOs;
 
-namespace BJMicro_Accounts_Refactor.Application.Services.Interfaces
+namespace BJMicro_Accounts_Refactor.Core.Services.Interfaces
 {
     public interface ICategoryService
     {

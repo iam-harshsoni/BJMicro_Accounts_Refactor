@@ -150,13 +150,13 @@ namespace BJMicro_Accounts_Refactor.Forms
         {
             try
             {
-                if (!FormValidationHelper.ValidateRequiredField(txtFineGold, errorProvider1, lblError, panel3, "Enter item code.")) return;
-                if (!FormValidationHelper.ValidateRequiredField(txtHallMark, errorProvider1, lblError, panel3, "Enter item code.")) return;
-                if (!FormValidationHelper.ValidateRequiredField(txtBuyBack, errorProvider1, lblError, panel3, "Enter item code.")) return;
-                if (!FormValidationHelper.ValidateRequiredField(txt22c, errorProvider1, lblError, panel3, "Enter item code.")) return;
-                if (!FormValidationHelper.ValidateRequiredField(txt23c, errorProvider1, lblError, panel3, "Enter item code.")) return;
-                if (!FormValidationHelper.ValidateRequiredField(txt18c, errorProvider1, lblError, panel3, "Enter item code.")) return;
-                if (!FormValidationHelper.ValidateRequiredField(txtSilver, errorProvider1, lblError, panel3, "Enter item code.")) return;
+                if (!FormValidationHelper.ValidateRequiredField(txtFineGold, errorProvider1, lblError, panel3, "Enter Fine Gold 100g rate.")) return;
+                if (!FormValidationHelper.ValidateRequiredField(txtHallMark, errorProvider1, lblError, panel3, "Enter HallMark 10g rate.")) return;
+                if (!FormValidationHelper.ValidateRequiredField(txtBuyBack, errorProvider1, lblError, panel3, "Enter BuyBack 10g rate.")) return;
+                if (!FormValidationHelper.ValidateRequiredField(txt22c, errorProvider1, lblError, panel3, "Enter 22c 10g rate.")) return;
+                if (!FormValidationHelper.ValidateRequiredField(txt23c, errorProvider1, lblError, panel3, "Enter 23c 10g rate.")) return;
+                if (!FormValidationHelper.ValidateRequiredField(txt18c, errorProvider1, lblError, panel3, "Enter 18c rate.")) return;
+                if (!FormValidationHelper.ValidateRequiredField(txtSilver, errorProvider1, lblError, panel3, "Enter Silver fine 1kg rate.")) return;
 
                 var newRate = CreateDailyRateFromInputs();
 

@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 namespace BJMicro_Accounts_Refactor.ViewModels;
 public class CategoryMasterVM
 {
-    public int rowNo { get; set; }
-    public long cId { get; set; }
-    public string cName { get; set; }
-    public string prefix { get; set; }
-    public string createdDate { get; set; }
-    public string updatedDate { get; set; }
+    public int RowNo { get; set; }
+    public long CId { get; set; }
+    public string? CName { get; set; }
+    public string? Prefix { get; set; }
+    public DateTime? CreatedDate { get; set; }
+    public DateTime? UpdatedDate { get; set; }
 }

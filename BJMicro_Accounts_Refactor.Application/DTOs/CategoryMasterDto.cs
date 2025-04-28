@@ -7,13 +7,16 @@ namespace BJMicro_Accounts_Refactor.Core.DTOs
     (
         long CId,
         string? CName,
-        string? Prefix
+        string? Prefix,
+        DateTime? CreatedDate,
+        DateTime? UpdatedDate
     );
 
     public record CreateCategoryDto(
 
         [Required(ErrorMessage = "FineGold is required.")] string? CName,
         [Required(ErrorMessage = "FineGold is required.")] string? Prefix
+
     );
 
     public record UpdateCategoryDto(

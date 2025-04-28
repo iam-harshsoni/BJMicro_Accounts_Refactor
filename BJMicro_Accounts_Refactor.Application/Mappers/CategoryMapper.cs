@@ -2,7 +2,7 @@
 using BJMicro_Accounts_Refactor.Core.DTOs;
 using BJMicro_Accounts_Refactor.Domain.Entities;
 
-namespace BJMicro_Accounts_Refactor.Application.Mappers
+namespace BJMicro_Accounts_Refactor.Core.Mappers
 {
     public static class CategoryMapper
     {
@@ -11,7 +11,9 @@ namespace BJMicro_Accounts_Refactor.Application.Mappers
             return new CategoryMasterDto(
                 entity.CId,
                 entity.CName,
-                entity.Prefix
+                entity.Prefix,
+                entity.CreatedDate,
+                entity.UpdatedDate
             );
         }
 

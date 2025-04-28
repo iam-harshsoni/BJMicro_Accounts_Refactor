@@ -27,8 +27,11 @@ namespace BJMicro_Accounts_Refactor
             using (var scope = serviceProvider.CreateScope())
             {
                 var httpClient = scope.ServiceProvider.GetRequiredService<HttpClient>();
-                var mainDashboard = new MainDashboard("Harsh", httpClient);
-                Application.Run(mainDashboard);
+                //var mainDashboard = new MainDashboard("Harsh", httpClient);
+                //Application.Run(mainDashboard);
+
+                var itemCategoryMaster = new ItemCategoryMaster(httpClient);
+                Application.Run(itemCategoryMaster);
             }
         }
         private static void ConfigureServices(IServiceCollection services)
@@ -59,6 +62,7 @@ namespace BJMicro_Accounts_Refactor
             // Forms
             services.AddScoped<MainDashboard>();
             services.AddScoped<DailyGoldRates>();
+            services.AddScoped<ItemCategoryMaster>();
 
             // (Optional) Logging, EmailServices, other utilities
         }

@@ -28,442 +28,451 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ItemCategoryMaster));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button13 = new System.Windows.Forms.Button();
-            this.lblHiddenId = new System.Windows.Forms.Label();
-            this.lblhiddenCategoryName = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblTotalRows = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtPrefix = new System.Windows.Forms.TextBox();
-            this.txtCategoryName = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lblError = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnCreate = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.SidePanel2 = new System.Windows.Forms.Panel();
-            this.dtCategoryList = new System.Windows.Forms.DataGridView();
-            this.SrNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtCategoryList)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            dataGridViewImageColumn1 = new DataGridViewImageColumn();
+            label15 = new Label();
+            label4 = new Label();
+            button13 = new Button();
+            lblHiddenId = new Label();
+            lblhiddenCategoryName = new Label();
+            panel5 = new Panel();
+            panel2 = new Panel();
+            lblTotalRows = new Label();
+            label5 = new Label();
+            txtPrefix = new TextBox();
+            txtCategoryName = new TextBox();
+            label3 = new Label();
+            panel3 = new Panel();
+            lblError = new Label();
+            label1 = new Label();
+            btnCreate = new Button();
+            label2 = new Label();
+            btnClear = new Button();
+            SidePanel2 = new Panel();
+            dgCategoryList = new DataGridView();
+            SrNo = new DataGridViewTextBoxColumn();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Delete = new DataGridViewImageColumn();
+            contextMenuStrip1 = new ContextMenuStrip(components);
+            editToolStripMenuItem = new ToolStripMenuItem();
+            deleteToolStripMenuItem = new ToolStripMenuItem();
+            panel4 = new Panel();
+            errorProvider1 = new ErrorProvider(components);
+            panel2.SuspendLayout();
+            panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgCategoryList).BeginInit();
+            contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
+            SuspendLayout();
             // 
             // dataGridViewImageColumn1
             // 
-            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.dataGridViewImageColumn1.HeaderText = "Action";
-           // this.dataGridViewImageColumn1.Image = global::BJMicroAccounts.Properties.Resources.delete1;
-            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            dataGridViewImageColumn1.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+            dataGridViewImageColumn1.HeaderText = "Action";
+            dataGridViewImageColumn1.ImageLayout = DataGridViewImageCellLayout.Zoom;
+            dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             // 
             // label15
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Red;
-            this.label15.Location = new System.Drawing.Point(20, 543);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(270, 17);
-            this.label15.TabIndex = 44;
-            this.label15.Text = "* Note : Double-Click on any one row to EDIT.";
+            label15.AutoSize = true;
+            label15.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label15.ForeColor = Color.Red;
+            label15.Location = new Point(23, 627);
+            label15.Margin = new Padding(4, 0, 4, 0);
+            label15.Name = "label15";
+            label15.Size = new Size(270, 17);
+            label15.TabIndex = 44;
+            label15.Text = "* Note : Double-Click on any one row to EDIT.";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(15, 181);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(142, 25);
-            this.label4.TabIndex = 36;
-            this.label4.Text = "Category List";
+            label4.AutoSize = true;
+            label4.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(18, 209);
+            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(142, 25);
+            label4.TabIndex = 36;
+            label4.Text = "Category List";
             // 
             // button13
             // 
-            this.button13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button13.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.ForeColor = System.Drawing.Color.White;
-            this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
-            this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button13.Location = new System.Drawing.Point(719, 3);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(32, 35);
-            this.button13.TabIndex = 34;
-            this.button13.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
+            button13.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button13.DialogResult = DialogResult.Cancel;
+            button13.FlatAppearance.BorderSize = 0;
+            button13.FlatStyle = FlatStyle.Flat;
+            button13.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button13.ForeColor = Color.White;
+            button13.ImageAlign = ContentAlignment.MiddleLeft;
+            button13.Location = new Point(839, 3);
+            button13.Margin = new Padding(4, 3, 4, 3);
+            button13.Name = "button13";
+            button13.Size = new Size(37, 40);
+            button13.TabIndex = 34;
+            button13.TextImageRelation = TextImageRelation.ImageBeforeText;
+            button13.UseVisualStyleBackColor = true;
+            button13.Click += button13_Click;
             // 
             // lblHiddenId
             // 
-            this.lblHiddenId.AutoSize = true;
-            this.lblHiddenId.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.lblHiddenId.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblHiddenId.Location = new System.Drawing.Point(458, 541);
-            this.lblHiddenId.Name = "lblHiddenId";
-            this.lblHiddenId.Size = new System.Drawing.Size(88, 20);
-            this.lblHiddenId.TabIndex = 29;
-            this.lblHiddenId.Text = "Hidden Id: ";
-            this.lblHiddenId.Visible = false;
+            lblHiddenId.AutoSize = true;
+            lblHiddenId.Font = new Font("Century Gothic", 11.25F);
+            lblHiddenId.ForeColor = SystemColors.ControlDark;
+            lblHiddenId.Location = new Point(534, 624);
+            lblHiddenId.Margin = new Padding(4, 0, 4, 0);
+            lblHiddenId.Name = "lblHiddenId";
+            lblHiddenId.Size = new Size(88, 20);
+            lblHiddenId.TabIndex = 29;
+            lblHiddenId.Text = "Hidden Id: ";
+            lblHiddenId.Visible = false;
             // 
             // lblhiddenCategoryName
             // 
-            this.lblhiddenCategoryName.AutoSize = true;
-            this.lblhiddenCategoryName.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.lblhiddenCategoryName.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblhiddenCategoryName.Location = new System.Drawing.Point(296, 541);
-            this.lblhiddenCategoryName.Name = "lblhiddenCategoryName";
-            this.lblhiddenCategoryName.Size = new System.Drawing.Size(148, 20);
-            this.lblhiddenCategoryName.TabIndex = 29;
-            this.lblhiddenCategoryName.Text = "Hidden Cat Name: ";
-            this.lblhiddenCategoryName.Visible = false;
+            lblhiddenCategoryName.AutoSize = true;
+            lblhiddenCategoryName.Font = new Font("Century Gothic", 11.25F);
+            lblhiddenCategoryName.ForeColor = SystemColors.ControlDark;
+            lblhiddenCategoryName.Location = new Point(345, 624);
+            lblhiddenCategoryName.Margin = new Padding(4, 0, 4, 0);
+            lblhiddenCategoryName.Name = "lblhiddenCategoryName";
+            lblhiddenCategoryName.Size = new Size(148, 20);
+            lblhiddenCategoryName.TabIndex = 29;
+            lblhiddenCategoryName.Text = "Hidden Cat Name: ";
+            lblhiddenCategoryName.Visible = false;
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.Goldenrod;
-            this.panel5.Location = new System.Drawing.Point(23, 209);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(150, 3);
-            this.panel5.TabIndex = 35;
+            panel5.BackColor = Color.Goldenrod;
+            panel5.Location = new Point(27, 241);
+            panel5.Margin = new Padding(4, 3, 4, 3);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(175, 3);
+            panel5.TabIndex = 35;
             // 
             // panel2
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.lblTotalRows);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.txtPrefix);
-            this.panel2.Controls.Add(this.txtCategoryName);
-            this.panel2.Controls.Add(this.label15);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.button13);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.btnCreate);
-            this.panel2.Controls.Add(this.lblHiddenId);
-            this.panel2.Controls.Add(this.lblhiddenCategoryName);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.btnClear);
-            this.panel2.Controls.Add(this.SidePanel2);
-            this.panel2.Controls.Add(this.dtCategoryList);
-            this.panel2.Controls.Add(this.panel5);
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(756, 566);
-            this.panel2.TabIndex = 42;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            panel2.BorderStyle = BorderStyle.FixedSingle;
+            panel2.Controls.Add(lblTotalRows);
+            panel2.Controls.Add(label5);
+            panel2.Controls.Add(txtPrefix);
+            panel2.Controls.Add(txtCategoryName);
+            panel2.Controls.Add(label15);
+            panel2.Controls.Add(label4);
+            panel2.Controls.Add(label3);
+            panel2.Controls.Add(button13);
+            panel2.Controls.Add(panel3);
+            panel2.Controls.Add(label1);
+            panel2.Controls.Add(btnCreate);
+            panel2.Controls.Add(lblHiddenId);
+            panel2.Controls.Add(lblhiddenCategoryName);
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(btnClear);
+            panel2.Controls.Add(SidePanel2);
+            panel2.Controls.Add(dgCategoryList);
+            panel2.Controls.Add(panel5);
+            panel2.Controls.Add(panel4);
+            panel2.Location = new Point(4, 3);
+            panel2.Margin = new Padding(4, 3, 4, 3);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(882, 653);
+            panel2.TabIndex = 42;
+            panel2.Paint += panel2_Paint;
             // 
             // lblTotalRows
             // 
-            this.lblTotalRows.AutoSize = true;
-            this.lblTotalRows.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalRows.Location = new System.Drawing.Point(672, 542);
-            this.lblTotalRows.Name = "lblTotalRows";
-            this.lblTotalRows.Size = new System.Drawing.Size(15, 16);
-            this.lblTotalRows.TabIndex = 126;
-            this.lblTotalRows.Text = "0";
+            lblTotalRows.AutoSize = true;
+            lblTotalRows.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotalRows.Location = new Point(784, 625);
+            lblTotalRows.Margin = new Padding(4, 0, 4, 0);
+            lblTotalRows.Name = "lblTotalRows";
+            lblTotalRows.Size = new Size(14, 16);
+            lblTotalRows.TabIndex = 126;
+            lblTotalRows.Text = "0";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(590, 541);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 16);
-            this.label5.TabIndex = 127;
-            this.label5.Text = "Total Rows : ";
+            label5.AutoSize = true;
+            label5.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(688, 624);
+            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(77, 16);
+            label5.TabIndex = 127;
+            label5.Text = "Total Rows : ";
             // 
             // txtPrefix
             // 
-            this.txtPrefix.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.txtPrefix.Location = new System.Drawing.Point(161, 109);
-            this.txtPrefix.MaxLength = 50;
-            this.txtPrefix.Name = "txtPrefix";
-            this.txtPrefix.Size = new System.Drawing.Size(567, 26);
-            this.txtPrefix.TabIndex = 125;
-            this.txtPrefix.Enter += new System.EventHandler(this.txtPrefix_Enter);
-            this.txtPrefix.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPrefix_KeyDown);
-            this.txtPrefix.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCategoryName_KeyPress);
+            txtPrefix.Font = new Font("Century Gothic", 11.25F);
+            txtPrefix.Location = new Point(188, 126);
+            txtPrefix.Margin = new Padding(4, 3, 4, 3);
+            txtPrefix.MaxLength = 50;
+            txtPrefix.Name = "txtPrefix";
+            txtPrefix.Size = new Size(661, 26);
+            txtPrefix.TabIndex = 125;
+            txtPrefix.Enter += txtPrefix_Enter;
+            txtPrefix.KeyDown += txtPrefix_KeyDown;
+            txtPrefix.KeyPress += txtCategoryName_KeyPress;
             // 
             // txtCategoryName
             // 
-            this.txtCategoryName.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.txtCategoryName.Location = new System.Drawing.Point(161, 65);
-            this.txtCategoryName.MaxLength = 50;
-            this.txtCategoryName.Name = "txtCategoryName";
-            this.txtCategoryName.Size = new System.Drawing.Size(567, 26);
-            this.txtCategoryName.TabIndex = 125;
-            this.txtCategoryName.Enter += new System.EventHandler(this.txtCategoryName_Enter);
-            this.txtCategoryName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCategoryName_KeyDown);
-            this.txtCategoryName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCategoryName_KeyPress);
-            this.txtCategoryName.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtCategoryName_KeyUp);
+            txtCategoryName.Font = new Font("Century Gothic", 11.25F);
+            txtCategoryName.Location = new Point(188, 75);
+            txtCategoryName.Margin = new Padding(4, 3, 4, 3);
+            txtCategoryName.MaxLength = 50;
+            txtCategoryName.Name = "txtCategoryName";
+            txtCategoryName.Size = new Size(661, 26);
+            txtCategoryName.TabIndex = 125;
+            txtCategoryName.Enter += txtCategoryName_Enter;
+            txtCategoryName.KeyDown += txtCategoryName_KeyDown;
+            txtCategoryName.KeyPress += txtCategoryName_KeyPress;
+            txtCategoryName.KeyUp += txtCategoryName_KeyUp;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 10);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(157, 25);
-            this.label3.TabIndex = 36;
-            this.label3.Text = "Add Category";
+            label3.AutoSize = true;
+            label3.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(4, 12);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(157, 25);
+            label3.TabIndex = 36;
+            label3.Text = "Add Category";
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.Pink;
-            this.panel3.Controls.Add(this.lblError);
-            this.panel3.Location = new System.Drawing.Point(161, 146);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(385, 32);
-            this.panel3.TabIndex = 40;
-            this.panel3.Visible = false;
+            panel3.BackColor = Color.Pink;
+            panel3.Controls.Add(lblError);
+            panel3.Location = new Point(188, 168);
+            panel3.Margin = new Padding(4, 3, 4, 3);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(449, 37);
+            panel3.TabIndex = 40;
+            panel3.Visible = false;
             // 
             // lblError
             // 
-            this.lblError.AutoSize = true;
-            this.lblError.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.lblError.Location = new System.Drawing.Point(3, 6);
-            this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(152, 20);
-            this.lblError.TabIndex = 0;
-            this.lblError.Text = "Confirm Password : ";
+            lblError.AutoSize = true;
+            lblError.Font = new Font("Century Gothic", 11.25F);
+            lblError.Location = new Point(4, 7);
+            lblError.Margin = new Padding(4, 0, 4, 0);
+            lblError.Name = "lblError";
+            lblError.Size = new Size(152, 20);
+            lblError.TabIndex = 0;
+            lblError.Text = "Confirm Password : ";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.label1.Location = new System.Drawing.Point(16, 71);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 20);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "Category Name : ";
+            label1.AutoSize = true;
+            label1.Font = new Font("Century Gothic", 11.25F);
+            label1.Location = new Point(19, 82);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(139, 20);
+            label1.TabIndex = 30;
+            label1.Text = "Category Name : ";
             // 
             // btnCreate
             // 
-            this.btnCreate.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCreate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.Location = new System.Drawing.Point(552, 146);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(85, 32);
-            this.btnCreate.TabIndex = 2;
-            this.btnCreate.Text = "Create";
-            this.btnCreate.UseVisualStyleBackColor = false;
-            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
+            btnCreate.BackColor = Color.DeepSkyBlue;
+            btnCreate.FlatStyle = FlatStyle.Flat;
+            btnCreate.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCreate.ForeColor = Color.White;
+            btnCreate.Location = new Point(644, 168);
+            btnCreate.Margin = new Padding(4, 3, 4, 3);
+            btnCreate.Name = "btnCreate";
+            btnCreate.Size = new Size(99, 37);
+            btnCreate.TabIndex = 2;
+            btnCreate.Text = "Create";
+            btnCreate.UseVisualStyleBackColor = false;
+            btnCreate.Click += BtnCreate_Click;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.label2.Location = new System.Drawing.Point(16, 115);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 20);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "Item Prefix : ";
+            label2.AutoSize = true;
+            label2.Font = new Font("Century Gothic", 11.25F);
+            label2.Location = new Point(19, 133);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(97, 20);
+            label2.TabIndex = 29;
+            label2.Text = "Item Prefix : ";
             // 
             // btnClear
             // 
-            this.btnClear.BackColor = System.Drawing.Color.Crimson;
-            this.btnClear.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(643, 146);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(85, 32);
-            this.btnClear.TabIndex = 3;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = false;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click_1);
+            btnClear.BackColor = Color.Crimson;
+            btnClear.DialogResult = DialogResult.Cancel;
+            btnClear.FlatStyle = FlatStyle.Flat;
+            btnClear.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnClear.ForeColor = Color.White;
+            btnClear.Location = new Point(750, 168);
+            btnClear.Margin = new Padding(4, 3, 4, 3);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(99, 37);
+            btnClear.TabIndex = 3;
+            btnClear.Text = "Clear";
+            btnClear.UseVisualStyleBackColor = false;
+            btnClear.Click += btnClear_Click_1;
             // 
             // SidePanel2
             // 
-            this.SidePanel2.BackColor = System.Drawing.Color.Goldenrod;
-            this.SidePanel2.Location = new System.Drawing.Point(4, 64);
-            this.SidePanel2.Name = "SidePanel2";
-            this.SidePanel2.Size = new System.Drawing.Size(5, 34);
-            this.SidePanel2.TabIndex = 31;
+            SidePanel2.BackColor = Color.Goldenrod;
+            SidePanel2.Location = new Point(5, 74);
+            SidePanel2.Margin = new Padding(4, 3, 4, 3);
+            SidePanel2.Name = "SidePanel2";
+            SidePanel2.Size = new Size(6, 39);
+            SidePanel2.TabIndex = 31;
             // 
-            // dtCategoryList
+            // dgCategoryList
             // 
-            this.dtCategoryList.AllowUserToAddRows = false;
-            this.dtCategoryList.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.dtCategoryList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtCategoryList.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dtCategoryList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtCategoryList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dtCategoryList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtCategoryList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SrNo,
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Delete});
-            this.dtCategoryList.ContextMenuStrip = this.contextMenuStrip1;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtCategoryList.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dtCategoryList.Location = new System.Drawing.Point(23, 218);
-            this.dtCategoryList.Name = "dtCategoryList";
-            this.dtCategoryList.ReadOnly = true;
-            this.dtCategoryList.Size = new System.Drawing.Size(707, 320);
-            this.dtCategoryList.TabIndex = 37;
-            this.dtCategoryList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtCategoryList_CellContentClick);
-            this.dtCategoryList.DoubleClick += new System.EventHandler(this.dtCategoryList_DoubleClick);
+            dgCategoryList.AllowUserToAddRows = false;
+            dgCategoryList.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle4.Font = new Font("Century Gothic", 9F);
+            dgCategoryList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dgCategoryList.BackgroundColor = Color.WhiteSmoke;
+            dgCategoryList.BorderStyle = BorderStyle.Fixed3D;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = SystemColors.Control;
+            dataGridViewCellStyle5.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dgCategoryList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dgCategoryList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgCategoryList.Columns.AddRange(new DataGridViewColumn[] { SrNo, Column1, Column2, Column3, Column4, Column5, Delete });
+            dgCategoryList.ContextMenuStrip = contextMenuStrip1;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = SystemColors.Window;
+            dataGridViewCellStyle6.Font = new Font("Century Gothic", 9F);
+            dataGridViewCellStyle6.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dgCategoryList.DefaultCellStyle = dataGridViewCellStyle6;
+            dgCategoryList.Location = new Point(27, 252);
+            dgCategoryList.Margin = new Padding(4, 3, 4, 3);
+            dgCategoryList.Name = "dgCategoryList";
+            dgCategoryList.ReadOnly = true;
+            dgCategoryList.Size = new Size(825, 369);
+            dgCategoryList.TabIndex = 37;
+            dgCategoryList.CellContentClick += dtCategoryList_CellContentClick;
+            dgCategoryList.DoubleClick += dtCategoryList_DoubleClick;
             // 
             // SrNo
             // 
-            this.SrNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.SrNo.DataPropertyName = "cId";
-            this.SrNo.HeaderText = "SrNo";
-            this.SrNo.Name = "SrNo";
-            this.SrNo.ReadOnly = true;
-            this.SrNo.Visible = false;
-            this.SrNo.Width = 40;
+            SrNo.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            SrNo.DataPropertyName = "cId";
+            SrNo.HeaderText = "SrNo";
+            SrNo.Name = "SrNo";
+            SrNo.ReadOnly = true;
+            SrNo.Visible = false;
+            SrNo.Width = 40;
             // 
             // Column1
             // 
-            this.Column1.DataPropertyName = "rowNo";
-            this.Column1.HeaderText = "#";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 50;
+            Column1.DataPropertyName = "rowNo";
+            Column1.HeaderText = "#";
+            Column1.Name = "Column1";
+            Column1.ReadOnly = true;
+            Column1.Width = 50;
             // 
             // Column2
             // 
-            this.Column2.DataPropertyName = "cName";
-            this.Column2.HeaderText = "Category Name";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 200;
+            Column2.DataPropertyName = "cName";
+            Column2.HeaderText = "Category Name";
+            Column2.Name = "Column2";
+            Column2.ReadOnly = true;
+            Column2.Width = 200;
             // 
             // Column3
             // 
-            this.Column3.DataPropertyName = "prefix";
-            this.Column3.HeaderText = "Prefix";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
+            Column3.DataPropertyName = "prefix";
+            Column3.HeaderText = "Prefix";
+            Column3.Name = "Column3";
+            Column3.ReadOnly = true;
             // 
             // Column4
             // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.DataPropertyName = "createdDate";
-            this.Column4.HeaderText = "CreatedDate";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
+            Column4.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Column4.DataPropertyName = "createdDate";
+            Column4.HeaderText = "CreatedDate";
+            Column4.Name = "Column4";
+            Column4.ReadOnly = true;
             // 
             // Column5
             // 
-            this.Column5.DataPropertyName = "updatedDate";
-            this.Column5.HeaderText = "UpdatedDate";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
+            Column5.DataPropertyName = "updatedDate";
+            Column5.HeaderText = "UpdatedDate";
+            Column5.Name = "Column5";
+            Column5.ReadOnly = true;
             // 
             // Delete
             // 
-            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Delete.HeaderText = "Action";
-          //  this.Delete.Image = global::BJMicroAccounts.Properties.Resources.delete1;
-            this.Delete.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Delete.Name = "Delete";
-            this.Delete.ReadOnly = true;
-            this.Delete.Width = 50;
+            Delete.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            Delete.HeaderText = "Action";
+            Delete.ImageLayout = DataGridViewImageCellLayout.Zoom;
+            Delete.Name = "Delete";
+            Delete.ReadOnly = true;
+            Delete.Width = 50;
             // 
             // contextMenuStrip1
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editToolStripMenuItem,
-            this.deleteToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(108, 48);
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { editToolStripMenuItem, deleteToolStripMenuItem });
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(108, 48);
             // 
             // editToolStripMenuItem
             // 
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
-            this.editToolStripMenuItem.Text = "Edit";
+            editToolStripMenuItem.Name = "editToolStripMenuItem";
+            editToolStripMenuItem.Size = new Size(107, 22);
+            editToolStripMenuItem.Text = "Edit";
             // 
             // deleteToolStripMenuItem
             // 
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
-            this.deleteToolStripMenuItem.Text = "Delete";
+            deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            deleteToolStripMenuItem.Size = new Size(107, 22);
+            deleteToolStripMenuItem.Text = "Delete";
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.Goldenrod;
-            this.panel4.Location = new System.Drawing.Point(10, 40);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(180, 3);
-            this.panel4.TabIndex = 35;
+            panel4.BackColor = Color.Goldenrod;
+            panel4.Location = new Point(12, 46);
+            panel4.Margin = new Padding(4, 3, 4, 3);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(210, 3);
+            panel4.TabIndex = 35;
             // 
             // errorProvider1
             // 
-            this.errorProvider1.ContainerControl = this;
+            errorProvider1.ContainerControl = this;
             // 
             // ItemCategoryMaster
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(761, 575);
-            this.Controls.Add(this.panel2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ItemCategoryMaster";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CategoryMaster";
-            this.Load += new System.EventHandler(this.ItemCategoryMaster_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtCategoryList)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            ClientSize = new Size(888, 663);
+            Controls.Add(panel2);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4, 3, 4, 3);
+            Name = "ItemCategoryMaster";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "CategoryMaster";
+            Load += ItemCategoryMaster_Load;
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgCategoryList).EndInit();
+            contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
+            ResumeLayout(false);
 
         }
 
@@ -485,7 +494,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Panel SidePanel2;
-        private System.Windows.Forms.DataGridView dtCategoryList;
+        private System.Windows.Forms.DataGridView dgCategoryList;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.DataGridViewTextBoxColumn SrNo;
