@@ -1010,6 +1010,16 @@
         "runtime": {
           "bin/placeholder/BJMicro_Accounts_Refactor.Domain.dll": {}
         }
+      },
+      "BJMicro_Accounts_Refactor.Utils/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/BJMicro_Accounts_Refactor.Utils.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BJMicro_Accounts_Refactor.Utils.dll": {}
+        }
       }
     }
   },
@@ -2741,11 +2751,17 @@
       "type": "project",
       "path": "../BJMicro_Accounts_Refactor.Models/BJMicro_Accounts_Refactor.Domain.csproj",
       "msbuildProject": "../BJMicro_Accounts_Refactor.Models/BJMicro_Accounts_Refactor.Domain.csproj"
+    },
+    "BJMicro_Accounts_Refactor.Utils/1.0.0": {
+      "type": "project",
+      "path": "../BJMicro_Accounts_Refactor.Utils/BJMicro_Accounts_Refactor.Utils.csproj",
+      "msbuildProject": "../BJMicro_Accounts_Refactor.Utils/BJMicro_Accounts_Refactor.Utils.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "BJMicro_Accounts_Refactor.DataAccess >= 1.0.0"
+      "BJMicro_Accounts_Refactor.DataAccess >= 1.0.0",
+      "BJMicro_Accounts_Refactor.Utils >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2782,6 +2798,9 @@
           "projectReferences": {
             "D:\\Project\\2018-24\\Desktop App\\From_Meet_Nathani\\BJMicroAcc_Refactor\\BJMicro_Accounts_Refactor\\BJMicro_Accounts_Refactor.DataAccess\\BJMicro_Accounts_Refactor.DataAccess.csproj": {
               "projectPath": "D:\\Project\\2018-24\\Desktop App\\From_Meet_Nathani\\BJMicroAcc_Refactor\\BJMicro_Accounts_Refactor\\BJMicro_Accounts_Refactor.DataAccess\\BJMicro_Accounts_Refactor.DataAccess.csproj"
+            },
+            "D:\\Project\\2018-24\\Desktop App\\From_Meet_Nathani\\BJMicroAcc_Refactor\\BJMicro_Accounts_Refactor\\BJMicro_Accounts_Refactor.Utils\\BJMicro_Accounts_Refactor.Utils.csproj": {
+              "projectPath": "D:\\Project\\2018-24\\Desktop App\\From_Meet_Nathani\\BJMicroAcc_Refactor\\BJMicro_Accounts_Refactor\\BJMicro_Accounts_Refactor.Utils\\BJMicro_Accounts_Refactor.Utils.csproj"
             }
           }
         }
