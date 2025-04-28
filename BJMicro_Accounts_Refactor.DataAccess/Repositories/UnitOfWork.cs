@@ -12,11 +12,14 @@ public class UnitOfWork : IUnitOfWork
 {
     private readonly MicroAccountsContext _db;
     public DailyRatesRepository DailyRates { get; private set; }
+    public CategoryRepository Category { get; private set; }
+
 
     public UnitOfWork(MicroAccountsContext db)
     {
         this._db = db;
         DailyRates = new DailyRatesRepository(_db);
+        Category = new CategoryRepository(_db);
     }
 
     public async Task SaveAsync()

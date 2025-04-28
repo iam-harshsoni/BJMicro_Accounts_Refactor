@@ -6,15 +6,9 @@ using BJMicro_Accounts_Refactor.DataAccess.Repositories.IRepository;
 
 namespace BJMicro_Accounts_Refactor.Core.Services
 {
-    public class DailyRateService : IDailyRateService
+    public class DailyRateService(IUnitOfWork unitOfWork) : IDailyRateService
     {
-        private readonly IUnitOfWork _unitOfWork;
-
-        public DailyRateService(IUnitOfWork unitOfWork)
-        {
-            _unitOfWork = unitOfWork;
-        }
-
+        private readonly IUnitOfWork _unitOfWork = unitOfWork;
 
         //Get all ( List all )
         public async Task<IEnumerable<DailyRateDto>> GetAllAsync(int pageNumber, int pageSize)
@@ -25,7 +19,7 @@ namespace BJMicro_Accounts_Refactor.Core.Services
                 .Skip((pageNumber - 1) * pageSize)
                 .Take(pageSize)
                 .ToList();
- 
+
             return entities.Select(x => x.ToDto()).ToList();
         }
 

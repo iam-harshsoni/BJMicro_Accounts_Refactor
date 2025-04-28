@@ -6,14 +6,9 @@ namespace BJMicroAcc_Refactor.API.Controllers
 {
     [ApiController]
     [Route("api/dailyrates")]
-    public class DailyRatesController : ControllerBase
+    public class DailyRatesController(IDailyRateService dailyRateService) : ControllerBase
     {
-        private readonly IDailyRateService _dailyRateService;
-
-        public DailyRatesController(IDailyRateService dailyRateService)
-        {
-            _dailyRateService = dailyRateService;
-        }
+        private readonly IDailyRateService _dailyRateService = dailyRateService;
 
         [HttpGet]
         public async Task<IActionResult> GetAll([FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 10)
@@ -67,6 +62,13 @@ namespace BJMicroAcc_Refactor.API.Controllers
 
             await _dailyRateService.UpdateAsync(rate);
             return Ok();
+        }
+
+        [HttpDelete("id/{id}")]
+        public async Task<IActionResult> Delete(long id)
+        {
+            await _dailyRateService.DeleteAsync(id);
+            return Ok(new { success = true, message = "Category deleted successfully" });
         }
 
 

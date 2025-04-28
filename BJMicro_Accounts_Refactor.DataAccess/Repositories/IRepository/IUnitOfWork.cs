@@ -8,6 +8,7 @@ namespace BJMicro_Accounts_Refactor.DataAccess.Repositories.IRepository;
 public interface IUnitOfWork
 {
     public DailyRatesRepository DailyRates { get; }
+    public CategoryRepository Category { get; }
     Task SaveAsync();
 }
 
