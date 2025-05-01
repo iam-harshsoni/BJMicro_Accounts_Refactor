@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BJMicro_Accounts_Refactor.DataAccess\BJMicro_Accounts_Refactor.DataAccess.csproj" />
+    <ProjectReference Include="..\BJMicro_Accounts_Refactor.Utils\BJMicro_Accounts_Refactor.Utils.csproj" />
   </ItemGroup>
 
 </Project>

@@ -13,3 +13,6 @@ build_property.EnableComHosting =
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
+
+[*.cs]
+csharp_style_namespace_declarations = file_scoped:suggestion

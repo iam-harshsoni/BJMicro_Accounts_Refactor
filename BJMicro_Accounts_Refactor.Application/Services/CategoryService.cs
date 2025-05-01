@@ -40,9 +40,9 @@ namespace BJMicro_Accounts_Refactor.Core.Services
             await _unitOfWork.Category.AddAsync(entity);
             await _unitOfWork.SaveAsync();
         }
-        public async Task UpdateAsync(UpdateCategoryDto dto)
+        public async Task UpdateAsync(long id, UpdateCategoryDto dto)
         {
-            var entity = await _unitOfWork.Category.GetAsync(x => x.CId == dto.CId);
+            var entity = await _unitOfWork.Category.GetAsync(x => x.CId == id);
             if (entity != null)
             {
                 entity = CategoryMapper.FromUpdateDto(dto, entity);

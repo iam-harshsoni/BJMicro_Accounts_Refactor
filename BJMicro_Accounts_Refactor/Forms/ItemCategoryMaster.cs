@@ -80,7 +80,7 @@ namespace BJMicro_Accounts_Refactor.Forms
                     if (result == DialogResult.OK)
                     {
                         var updateDto = CreateUpdateDailyRateDto(Convert.ToInt32(lblHiddenId.Text));
-                        var updateResponse = await _httpClient.PutAsJsonAsync(_categoryUrl, updateDto);
+                        var updateResponse = await _httpClient.PutAsJsonAsync($"{_categoryUrl}/id/{lblHiddenId.Text}", updateDto);
 
                         if (updateResponse.IsSuccessStatusCode)
                         {
@@ -116,7 +116,6 @@ namespace BJMicro_Accounts_Refactor.Forms
         private UpdateCategoryDto CreateUpdateDailyRateDto(long id)
         {
             return new UpdateCategoryDto(
-                id,
                 txtCategoryName.Text,
                 txtPrefix.Text
             );

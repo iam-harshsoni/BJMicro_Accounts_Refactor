@@ -1,88 +1,87 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace BJMicro_Accounts_Refactor.Core.DTOs
-{
-    public record SalesDetailDto
-    (
-        long SDetailsId,
-        long? SalesId,
-        long? ProductId,
-        decimal? Qty,
-        decimal? Weight,
-        string? Unit,
-        decimal? Karat,
-        decimal? KRate,
-        decimal? Making,
-        decimal? Rate,
-        DateTime? CreatedDate,
-        DateTime? UpdateDate
-    );
+namespace BJMicro_Accounts_Refactor.Core.DTOs;
 
-    public record CreateSalesDetailDto
-    (
-        [Required(ErrorMessage = "Sales Id is required.")]
-        [Range(1, long.MaxValue, ErrorMessage = "Sales Id must be greater than 0.")]
-        long? SalesId,
+public record SalesDetailDto
+(
+    long SDetailsId,
+    long? SalesId,
+    long? ProductId,
+    decimal? Qty,
+    decimal? Weight,
+    string? Unit,
+    decimal? Karat,
+    decimal? KRate,
+    decimal? Making,
+    decimal? Rate,
+    DateTime? CreatedDate,
+    DateTime? UpdateDate
+);
 
-        [Required(ErrorMessage = "Product Id is required.")]
-        [Range(1, long.MaxValue, ErrorMessage = "Product Id must be greater than 0.")]
-        long? ProductId,
+public record CreateSalesDetailDto
+(
+    [Required(ErrorMessage = "Sales Id is required.")]
+    [Range(1, long.MaxValue, ErrorMessage = "Sales Id must be greater than 0.")]
+    long? SalesId,
 
-        [Range(typeof(decimal), "0", "79228162514264337593543950335", ErrorMessage = "Qty must be a non-negative number.")]
-        decimal? Qty,
+    [Required(ErrorMessage = "Product Id is required.")]
+    [Range(1, long.MaxValue, ErrorMessage = "Product Id must be greater than 0.")]
+    long? ProductId,
 
-        [Range(typeof(decimal), "0", "79228162514264337593543950335", ErrorMessage = "Weight must be a non-negative number.")]
-        decimal? Weight,
+    [Range(typeof(decimal), "0", "79228162514264337593543950335", ErrorMessage = "Qty must be a non-negative number.")]
+    decimal? Qty,
 
-        [StringLength(50, ErrorMessage = "Unit cannot exceed 50 characters.")]
-        string? Unit,
+    [Range(typeof(decimal), "0", "79228162514264337593543950335", ErrorMessage = "Weight must be a non-negative number.")]
+    decimal? Weight,
 
-        [Range(typeof(decimal), "0", "79228162514264337593543950335", ErrorMessage = "Karat must be a non-negative number.")]
-        decimal? Karat,
+    [StringLength(50, ErrorMessage = "Unit cannot exceed 50 characters.")]
+    string? Unit,
 
-        [Range(typeof(decimal), "0", "79228162514264337593543950335", ErrorMessage = "KRate must be a non-negative number.")]
-        decimal? KRate,
+    [Range(typeof(decimal), "0", "79228162514264337593543950335", ErrorMessage = "Karat must be a non-negative number.")]
+    decimal? Karat,
 
-        [Range(typeof(decimal), "0", "79228162514264337593543950335", ErrorMessage = "Making must be a non-negative number.")]
-        decimal? Making,
+    [Range(typeof(decimal), "0", "79228162514264337593543950335", ErrorMessage = "KRate must be a non-negative number.")]
+    decimal? KRate,
 
-        [Range(typeof(decimal), "0", "79228162514264337593543950335", ErrorMessage = "Rate must be a non-negative number.")]
-        decimal? Rate
-    );
+    [Range(typeof(decimal), "0", "79228162514264337593543950335", ErrorMessage = "Making must be a non-negative number.")]
+    decimal? Making,
 
-    public record UpdateSalesDetailDto
-    (
-        [Range(1, long.MaxValue, ErrorMessage = "SDetailsId must be greater than 0.")]
-        long SDetailsId,
+    [Range(typeof(decimal), "0", "79228162514264337593543950335", ErrorMessage = "Rate must be a non-negative number.")]
+    decimal? Rate
+);
 
-        [Required(ErrorMessage = "Sales Id is required.")]
-        [Range(1, long.MaxValue, ErrorMessage = "Sales Id must be greater than 0.")]
-        long? SalesId,
+public record UpdateSalesDetailDto
+(
+    [Range(1, long.MaxValue, ErrorMessage = "SDetailsId must be greater than 0.")]
+    long SDetailsId,
 
-        [Required(ErrorMessage = "Product Id is required.")]
-        [Range(1, long.MaxValue, ErrorMessage = "Product Id must be greater than 0.")]
-        long? ProductId,
+    [Required(ErrorMessage = "Sales Id is required.")]
+    [Range(1, long.MaxValue, ErrorMessage = "Sales Id must be greater than 0.")]
+    long? SalesId,
 
-        [Range(typeof(decimal), "0", "79228162514264337593543950335", ErrorMessage = "Qty must be a non-negative number.")]
-        decimal? Qty,
+    [Required(ErrorMessage = "Product Id is required.")]
+    [Range(1, long.MaxValue, ErrorMessage = "Product Id must be greater than 0.")]
+    long? ProductId,
 
-        [Range(typeof(decimal), "0", "79228162514264337593543950335", ErrorMessage = "Weight must be a non-negative number.")]
-        decimal? Weight,
+    [Range(typeof(decimal), "0", "79228162514264337593543950335", ErrorMessage = "Qty must be a non-negative number.")]
+    decimal? Qty,
 
-        [StringLength(50, ErrorMessage = "Unit cannot exceed 50 characters.")]
-        string? Unit,
+    [Range(typeof(decimal), "0", "79228162514264337593543950335", ErrorMessage = "Weight must be a non-negative number.")]
+    decimal? Weight,
 
-        [Range(typeof(decimal), "0", "79228162514264337593543950335", ErrorMessage = "Karat must be a non-negative number.")]
-        decimal? Karat,
+    [StringLength(50, ErrorMessage = "Unit cannot exceed 50 characters.")]
+    string? Unit,
 
-        [Range(typeof(decimal), "0", "79228162514264337593543950335", ErrorMessage = "KRate must be a non-negative number.")]
-        decimal? KRate,
+    [Range(typeof(decimal), "0", "79228162514264337593543950335", ErrorMessage = "Karat must be a non-negative number.")]
+    decimal? Karat,
 
-        [Range(typeof(decimal), "0", "79228162514264337593543950335", ErrorMessage = "Making must be a non-negative number.")]
-        decimal? Making,
+    [Range(typeof(decimal), "0", "79228162514264337593543950335", ErrorMessage = "KRate must be a non-negative number.")]
+    decimal? KRate,
 
-        [Range(typeof(decimal), "0", "79228162514264337593543950335", ErrorMessage = "Rate must be a non-negative number.")]
-        decimal? Rate
-    );
-}
+    [Range(typeof(decimal), "0", "79228162514264337593543950335", ErrorMessage = "Making must be a non-negative number.")]
+    decimal? Making,
+
+    [Range(typeof(decimal), "0", "79228162514264337593543950335", ErrorMessage = "Rate must be a non-negative number.")]
+    decimal? Rate
+);

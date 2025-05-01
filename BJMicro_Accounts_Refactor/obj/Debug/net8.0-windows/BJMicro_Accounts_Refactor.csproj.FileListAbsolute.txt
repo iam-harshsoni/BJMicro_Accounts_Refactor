@@ -159,3 +159,5 @@ D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Acc
 D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor\obj\Debug\net8.0-windows\BJMicro_Accounts_Refactor.pdb
 D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor\obj\Debug\net8.0-windows\BJMicro_Accounts_Refactor.genruntimeconfig.cache
 D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor\obj\Debug\net8.0-windows\ref\BJMicro_Accounts_Refactor.dll
+D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor\bin\Debug\net8.0-windows\BJMicro_Accounts_Refactor.Utils.dll
+D:\Project\2018-24\Desktop App\From_Meet_Nathani\BJMicroAcc_Refactor\BJMicro_Accounts_Refactor\BJMicro_Accounts_Refactor\bin\Debug\net8.0-windows\BJMicro_Accounts_Refactor.Utils.pdb

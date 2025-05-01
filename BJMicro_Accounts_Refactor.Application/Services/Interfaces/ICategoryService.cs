@@ -12,7 +12,7 @@ namespace BJMicro_Accounts_Refactor.Core.Services.Interfaces
         // Task<CategoryMasterDto?> GetByIdAsync(long id);
         Task<CategoryMasterDto?> GetByIdAsync(long id);
         Task AddAsync(CreateCategoryDto dto);
-        Task UpdateAsync(UpdateCategoryDto dto);
+        Task UpdateAsync(long id, UpdateCategoryDto dto);
         Task DeleteAsync(long id);
     }
 }

@@ -1,6 +1,7 @@
 // DTO used for reading the full information from TblItemMaster
 using System.ComponentModel.DataAnnotations;
 
+namespace BJMicro_Accounts_Refactor.Core.DTOs;
 public record TblItemMasterDto(
     long Id,
     string? ItemCode,

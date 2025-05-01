@@ -598,7 +598,8 @@
       },
       "BJMicro_Accounts_Refactor.Core/1.0.0": {
         "dependencies": {
-          "BJMicro_Accounts_Refactor.DataAccess": "1.0.0"
+          "BJMicro_Accounts_Refactor.DataAccess": "1.0.0",
+          "BJMicro_Accounts_Refactor.Utils": "1.0.0"
         },
         "runtime": {
           "BJMicro_Accounts_Refactor.Core.dll": {
@@ -623,6 +624,14 @@
       "BJMicro_Accounts_Refactor.Domain/1.0.0": {
         "runtime": {
           "BJMicro_Accounts_Refactor.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "BJMicro_Accounts_Refactor.Utils/1.0.0": {
+        "runtime": {
+          "BJMicro_Accounts_Refactor.Utils.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1074,6 +1083,11 @@
       "sha512": ""
     },
     "BJMicro_Accounts_Refactor.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BJMicro_Accounts_Refactor.Utils/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

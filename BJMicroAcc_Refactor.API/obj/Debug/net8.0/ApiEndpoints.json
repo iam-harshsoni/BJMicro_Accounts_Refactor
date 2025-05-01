@@ -69,15 +69,15 @@
   },
   {
     "ContainingType": "BJMicroAcc_Refactor.API.Controllers.CategoryController",
-    "Method": "Update",
-    "RelativePath": "api/category",
-    "HttpMethod": "PUT",
+    "Method": "GetById",
+    "RelativePath": "api/category/id/{id}",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "category",
-        "Type": "BJMicro_Accounts_Refactor.Core.DTOs.UpdateCategoryDto",
+        "Name": "id",
+        "Type": "System.Int64",
         "IsRequired": true
       }
     ],
@@ -85,16 +85,7 @@
       {
         "Type": "System.Void",
         "MediaTypes": [],
-        "StatusCode": 204
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 400
+        "StatusCode": 200
       },
       {
         "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
@@ -114,9 +105,9 @@
   },
   {
     "ContainingType": "BJMicroAcc_Refactor.API.Controllers.CategoryController",
-    "Method": "GetById",
+    "Method": "Update",
     "RelativePath": "api/category/id/{id}",
-    "HttpMethod": "GET",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -124,13 +115,27 @@
         "Name": "id",
         "Type": "System.Int64",
         "IsRequired": true
+      },
+      {
+        "Name": "categoryDto",
+        "Type": "BJMicro_Accounts_Refactor.Core.DTOs.UpdateCategoryDto",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
         "Type": "System.Void",
         "MediaTypes": [],
-        "StatusCode": 200
+        "StatusCode": 204
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
       },
       {
         "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",

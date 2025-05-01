@@ -77,27 +77,27 @@ namespace BJMicroAcc_Refactor.API.Controllers
             }
         }
 
-        [HttpPut]
+        [HttpPut("id/{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Update([FromBody] UpdateCategoryDto category)
+        public async Task<IActionResult> Update([FromRoute] long id, [FromBody] UpdateCategoryDto categoryDto)
         {
             try
             {
                 if (!ModelState.IsValid)
                     return BadRequest(ModelState);
 
-                if (category == null)
+                if (categoryDto == null)
                     return BadRequest("Category data is null");
 
-                var exists = await _categoryService.GetByIdAsync(category.CId);
+                // var exists = await _categoryService.GetByIdAsync(Id);
 
-                if (exists == null)
-                    return NotFound($"Category with ID {category.CId} not found");
+                // if (exists == null)
+                //     return NotFound($"Category with ID {Id} not found");
 
-                await _categoryService.UpdateAsync(category);
+                await _categoryService.UpdateAsync(id, categoryDto);
                 return NoContent();
             }
             catch (Exception ex)

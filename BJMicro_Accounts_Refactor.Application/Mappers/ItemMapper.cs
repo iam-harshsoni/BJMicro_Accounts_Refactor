@@ -2,6 +2,7 @@
 using BJMicro_Accounts_Refactor.Core.DTOs;
 using BJMicro_Accounts_Refactor.Domain.Entities;
 
+namespace BJMicro_Accounts_Refactor.Core.Mappers;
 public static class TblItemMasterMapper
 {
     // Map entity to full read DTO

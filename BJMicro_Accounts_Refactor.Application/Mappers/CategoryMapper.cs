@@ -2,44 +2,43 @@
 using BJMicro_Accounts_Refactor.Core.DTOs;
 using BJMicro_Accounts_Refactor.Domain.Entities;
 
-namespace BJMicro_Accounts_Refactor.Core.Mappers
+namespace BJMicro_Accounts_Refactor.Core.Mappers;
+
+public static class CategoryMapper
 {
-    public static class CategoryMapper
+    public static CategoryMasterDto ToDto(this TblCategoryMaster entity)
     {
-        public static CategoryMasterDto ToDto(this TblCategoryMaster entity)
+        return new CategoryMasterDto(
+            entity.CId,
+            entity.CName,
+            entity.Prefix,
+            entity.CreatedDate,
+            entity.UpdatedDate
+        );
+    }
+
+    public static TblCategoryMaster FromCreateDto(this CreateCategoryDto dto)
+    {
+
+        return new TblCategoryMaster
         {
-            return new CategoryMasterDto(
-                entity.CId,
-                entity.CName,
-                entity.Prefix,
-                entity.CreatedDate,
-                entity.UpdatedDate
-            );
-        }
+            CName = dto.CName,
+            Prefix = dto.Prefix,
+            CreatedDate = DateTime.UtcNow,
+            UpdatedDate = DateTime.UtcNow
+        };
+    }
 
-        public static TblCategoryMaster FromCreateDto(this CreateCategoryDto dto)
-        {
+    public static TblCategoryMaster FromUpdateDto(this UpdateCategoryDto dto, TblCategoryMaster existingEntity = null)
+    {
 
-            return new TblCategoryMaster
-            {
-                CName = dto.CName,
-                Prefix = dto.Prefix,
-                CreatedDate = DateTime.UtcNow,
-                UpdatedDate = DateTime.UtcNow
-            };
-        }
+        // If updating an existing entity, preserve its original properties
+        var entity = existingEntity ?? new TblCategoryMaster();
 
-        public static TblCategoryMaster FromUpdateDto(this UpdateCategoryDto dto, TblCategoryMaster existingEntity = null)
-        {
+        entity.CName = dto.CName;
+        entity.Prefix = dto.Prefix;
+        entity.CreatedDate = DateTime.UtcNow;
 
-            // If updating an existing entity, preserve its original properties
-            var entity = existingEntity ?? new TblCategoryMaster();
-
-            entity.CName = dto.CName;
-            entity.Prefix = dto.Prefix;
-            entity.CreatedDate = DateTime.UtcNow;
-
-            return entity;
-        }
+        return entity;
     }
 }
